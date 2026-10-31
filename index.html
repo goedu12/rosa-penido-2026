@@ -1,206 +1,860 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Retrospectiva 2026 da Escola Municipal Dona Rosa Penido Dalla Vecchia, Cocalinho, Mato Grosso.">
-
-<title>Rosa Penido 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rosa Penido 2025–2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* Layout: caderno de registro na identidade FLUPP — capa clara com o círculo-flor laranja, linha do tempo com carimbo de data à esquerda.
+   Visual único e sempre claro (escolha deliberada: a página não muda para o modo escuro). */
 :root{
-  --ink:#183149; --ink-soft:#4B5F73; --paper:#FBF8F3; --paper-raised:#F3EDE3;
-  --accent:#F18407; --accent-deep:#A85700; --line:#E4DCCB; --shadow: 0 10px 30px -18px rgba(24,49,73,.35);
-  color-scheme: light;
+  color-scheme:light;
+  /* revisão Fable: navy = estrutura, laranja = um acento por tela; faixas de cor dão ritmo */
+  --navy:#183149; --navy-800:#0F2236; --navy-100:#DCE6F0; --navy-50:#EEF3F8;
+  --orange:#F18407; --orange-text:#B85600; --cream:#FFF3E6; --cream-200:#FFE4C4; --line-strong:#7E8FA3;
+  --paper:#FFFFFF; --sheet:#FFFFFF; --ink:#183149; --ink-2:#3F5063; --line:#D3DBE4;
+  --terra:#B85600; --ipe:#F18407; --ipe-text:#B85600; --mata:#183149; --mata-soft:#FFF3E6; --terra-soft:#FFF3E6;
+  --cover:#FFFFFF; --cover-ink:#183149; --cover-ink-2:#3F5063;
+  --f-display:"Literata", Georgia, "Times New Roman", serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --shadow:0 12px 28px -20px rgba(24,49,73,.35);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --ink:#F3EDE3; --ink-soft:#C7CBD4; --paper:#101E2C; --paper-raised:#16283A;
-    --accent:#FFA53D; --accent-deep:#F18407; --line:#24384A; --shadow: 0 10px 30px -14px rgba(0,0,0,.55);
-    color-scheme: dark;
-  }
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+body{background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.6; margin:0}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--paper)}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.15; margin:0}
+a{color:var(--mata)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--terra); outline-offset:2px}
+img{max-width:100%; display:block}
+.gut{padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px; margin-inline:auto}
+.mono{font-family:var(--f-mono); font-size:.78rem; letter-spacing:.04em}
+
+/* CAPA */
+.cover{background:var(--cover); color:var(--cover-ink); padding-block:40px 48px; position:relative; overflow:hidden; border-bottom:1px solid var(--line)}
+.flower{position:absolute; right:-140px; top:-120px; width:520px; height:520px; pointer-events:none; opacity:.9}
+.flower circle{fill:none; stroke:var(--ipe); stroke-width:1.6; stroke-dasharray:420; stroke-dashoffset:420; animation:draw 2.4s ease forwards}
+.flower circle:nth-child(2){animation-delay:.15s,0s}.flower circle:nth-child(3){animation-delay:.3s,0s}.flower circle:nth-child(4){animation-delay:.45s,0s}.flower circle:nth-child(5){animation-delay:.6s,0s}.flower circle:nth-child(6){animation-delay:.75s,0s}.flower circle:nth-child(7){animation-delay:.9s,0s}
+.flower g{transform-origin:260px 260px; animation:spin 240s linear infinite, breathe 9s ease-in-out infinite alternate}
+@keyframes breathe{to{scale:1.035}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cover .wrap{position:relative}
+.brand{display:flex; align-items:center; gap:14px; margin-bottom:28px; flex-wrap:wrap}
+.brand img{height:30px; width:auto}
+.brand span{font-family:var(--f-mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2); border-left:1px solid var(--line); padding-left:14px}
+.cover-grid{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:40px; align-items:center}
+.kicker{font-family:var(--f-mono); font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cover-ink-2)}
+.cover h1{font-size:clamp(2.4rem,6vw,4.4rem); font-weight:600; margin:14px 0 18px; letter-spacing:-.01em}
+.cover h1 em{font-style:italic; font-weight:400; color:var(--ipe-text)}
+.reel-pause{position:absolute; top:10px; right:10px; width:34px; height:34px; border-radius:50%; border:0; background:rgba(255,255,255,.9); color:var(--ink); cursor:pointer; font-size:.8rem; z-index:2}
+.entry,.month,.year,section{scroll-margin-top:70px}
+.path{width:100%; border-collapse:collapse; font-size:.92rem}
+.path th,.path td{text-align:left; padding:10px 12px 10px 0; border-top:1px solid var(--line); vertical-align:top}
+.path th{font:500 .78rem var(--f-mono); color:var(--terra); white-space:nowrap; width:120px}
+.path td b{font-family:var(--f-display); font-weight:600}
+.path td span{display:block; color:var(--ink-2); font-size:.88rem}
+.path-wrap{overflow-x:auto}
+.next{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px}
+.next div{background:var(--sheet); border:1px solid var(--line); border-radius:8px; padding:16px 18px}
+.next h3{font-size:1.05rem; margin-bottom:6px}
+.next p{margin:0; color:var(--ink-2); font-size:.93rem}
+@media (max-width:680px){ .path th{width:auto; white-space:normal} }
+.cover p.lede{font-size:1.12rem; max-width:52ch; color:var(--cover-ink-2); margin:0}
+.reel{position:relative; aspect-ratio:4/3.2; border-radius:10px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(24,49,73,.5); background:var(--line)}
+.reel img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.08); transition:opacity 1.2s ease, transform 6s ease}
+.reel img.on{opacity:1; transform:scale(1)}
+.reel figcaption{position:absolute; left:12px; bottom:12px; background:rgba(255,255,255,.92); color:var(--ink); font-size:.8rem; padding:6px 10px; border-radius:999px; max-width:calc(100% - 24px)}
+.reel .dots{position:absolute; right:12px; bottom:14px; display:flex; gap:5px}
+.reel .dots i{width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.55)}
+.reel .dots i.on{background:var(--ipe)}
+.facts{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px; margin-top:40px; padding-top:24px; border-top:1px solid var(--line)}
+.facts b{display:block; font-family:var(--f-display); font-size:2.2rem; font-weight:600; color:var(--ipe-text); font-variant-numeric:tabular-nums; line-height:1.1}
+.facts span{font-size:.85rem; color:var(--cover-ink-2)}
+.progress{position:fixed; left:0; top:env(safe-area-inset-top,0px); height:3px; width:100%; transform-origin:0 50%; transform:scaleX(0); background:var(--ipe); z-index:12}
+
+/* MAPA DOS MESES */
+.months{display:grid; grid-template-columns:repeat(19,minmax(0,1fr)); gap:4px; align-items:end; height:150px; margin-top:8px}
+.mbar{display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:6px; height:100%; border:0; background:none; padding:0; cursor:pointer; font:inherit; color:var(--ink-2); min-width:0}
+.mbar i{display:block; width:100%; max-width:34px; border-radius:6px 6px 2px 2px; background:var(--mata); opacity:.85; transform-origin:bottom; transition:transform .5s cubic-bezier(.2,.8,.2,1), background .2s}
+.mbar:hover i,.mbar:focus-visible i{background:var(--ipe); opacity:1}
+.mbar b{font:600 .8rem var(--f-body); color:var(--ink)}
+.mbar span{font:.66rem var(--f-mono); letter-spacing:.04em; text-transform:uppercase}
+.mbar.is-cha i{background:var(--ipe)}
+.months-key{display:flex; gap:18px; flex-wrap:wrap; font-size:.82rem; color:var(--ink-2); margin-top:12px}
+.months-key i{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:-1px}
+.mscroll{overflow-x:auto}
+.mscroll .months{min-width:640px}
+
+/* ESPECIAL VII CHÁ */
+.cha{background:var(--ink); color:#fff; padding-block:64px; position:relative; overflow:hidden}
+.cha .kicker{color:var(--ipe)}
+.cha h2{font-size:clamp(2rem,5vw,3.4rem); font-weight:600; margin:10px 0 12px; color:#fff}
+.cha .intro{color:#C9D3DE; max-width:62ch; margin:0 0 28px}
+.stage{position:relative; border-radius:12px; overflow:hidden; aspect-ratio:16/8; background:#0d1b29; box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.stage img{width:100%; height:100%; object-fit:cover}
+.curtain{position:absolute; top:0; bottom:0; width:51%; background:repeating-linear-gradient(90deg,#9E2B25 0 22px,#B8352E 22px 44px); transition:transform 1.8s cubic-bezier(.7,0,.2,1); z-index:2; box-shadow:inset 0 -40px 60px rgba(0,0,0,.35)}
+.curtain.l{left:0} .curtain.r{right:0}
+.stage.open .curtain.l{transform:translateX(-100%)} .stage.open .curtain.r{transform:translateX(100%)}
+.stage .open-btn{position:absolute; inset:auto 0 18px 0; margin:auto; width:max-content; z-index:3; background:var(--ipe); color:#1d1200; border:0; border-radius:999px; padding:10px 18px; font:600 .95rem var(--f-body); cursor:pointer}
+.stage.open .open-btn{opacity:0; pointer-events:none; transition:opacity .4s}
+.program{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; margin-top:22px}
+.act{text-align:left; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); color:#fff; border-radius:8px; padding:14px; cursor:pointer; font:inherit; display:flex; flex-direction:column; gap:4px; transition:background .2s, transform .2s, border-color .2s; min-width:0}
+.act:hover{transform:translateY(-2px); border-color:var(--ipe)}
+.act[aria-pressed="true"]{background:var(--ipe); color:#1d1200; border-color:var(--ipe)}
+.act small{font:.7rem var(--f-mono); letter-spacing:.08em; text-transform:uppercase; opacity:.8}
+.act b{font-family:var(--f-display); font-size:1.05rem}
+.act span{font-size:.84rem; opacity:.85}
+.act-detail{margin-top:16px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; align-items:start; background:rgba(255,255,255,.05); border-radius:10px; padding:16px}
+.act-detail img,.act-detail video{width:100%; border-radius:8px; max-height:360px; object-fit:cover; background:#000}
+.act-detail h3{color:#fff; font-size:1.3rem; margin-bottom:6px}
+.act-detail p{color:#C9D3DE; margin:0 0 8px}
+.act-detail q{display:block; font-family:var(--f-display); font-style:italic; color:#FFD7A8; margin-top:8px}
+.cha-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+.cha-links a{color:#fff; border:1px solid rgba(255,255,255,.3); border-radius:999px; padding:8px 14px; text-decoration:none; font-size:.9rem}
+.cha-links a:hover{border-color:var(--ipe); color:var(--ipe)}
+@media (max-width:700px){
+  .act-detail{grid-template-columns:1fr} .stage{aspect-ratio:4/3}
+  .program{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:6px; scrollbar-width:none}
+  .program::-webkit-scrollbar{display:none}
+  .act{flex:0 0 72%; scroll-snap-align:start}
+  .flower{width:300px; height:300px; right:-150px; top:-110px; opacity:.45}
 }
-:root[data-theme="dark"]{
-  --ink:#F3EDE3; --ink-soft:#C7CBD4; --paper:#101E2C; --paper-raised:#16283A;
-  --accent:#FFA53D; --accent-deep:#F18407; --line:#24384A; --shadow: 0 10px 30px -14px rgba(0,0,0,.55);
-  color-scheme: dark;
-}
-*{box-sizing:border-box;}
-body{background:var(--paper); color:var(--ink); font-family:"Karla",system-ui,sans-serif; margin:0; padding-inline:0;}
-h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif; text-wrap:balance;}
-img{max-width:100%; display:block;}
-a{color:inherit;}
-.wrap{max-width:920px; margin-inline:auto; padding-inline:20px;}
 
-/* ---------- HERO ---------- */
-.hero{position:relative; overflow:hidden; padding-block: 72px 96px; color:#FBF8F3; background:#0F2033;}
-.hero::before{
-  content:""; position:absolute; inset:0;
-  background:
-    linear-gradient(180deg, rgba(10,22,36,.55) 0%, rgba(10,22,36,.72) 55%, rgba(10,22,36,.94) 100%),
-    url('fotos/IMG-20260630-WA0066.jpg') center 30%/cover no-repeat;
-  z-index:0;
+/* MOVIMENTO AO ROLAR (estado de repouso visível) */
+.entry .body,.entry .stamp{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.entry.pre .body{transform:translateY(14px)}
+.entry.pre .stamp .date{transform:rotate(-14deg) scale(1.25)}
+.stamp .date{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.proj{will-change:transform}
+.lb .play{left:50%; top:calc(14px + env(safe-area-inset-top,0px)); transform:translateX(-50%); width:auto; padding:0 16px; font-size:.9rem}
+.lb .bar2{position:absolute; left:0; bottom:0; height:3px; background:var(--ipe); width:0}
+@media (prefers-reduced-motion: reduce){
+  .flower circle,.flower g{animation:none; stroke-dashoffset:0}
+  .reel img{transition:none} .curtain{transition:none}
+  .entry.pre .body{transform:none} .entry.pre .stamp .date{transform:rotate(-2deg)}
 }
-.hero-inner{position:relative; z-index:1;}
-.hero-logo{height:34px; margin-bottom:40px; opacity:.96;}
-.hero-eyebrow{display:inline-block; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#FFD9A0; border:1px solid rgba(255,217,160,.4); border-radius:999px; padding:6px 14px; margin-bottom:22px;}
-.hero h1{font-size:clamp(2.4rem,6vw,4.2rem); line-height:1.04; margin:0 0 14px; font-weight:600; color:#fff;}
-.hero p.lede{font-size:clamp(1.05rem,2vw,1.3rem); max-width:34ch; color:#E9EEF3; margin:0 0 30px; font-weight:400;}
-.hero-facts{display:flex; flex-wrap:wrap; gap:28px; margin-top:44px; padding-top:28px; border-top:1px solid rgba(255,255,255,.22);}
-.hero-facts div{min-width:120px;}
-.hero-facts b{display:block; font-family:"Fraunces",serif; font-size:1.7rem; color:var(--accent);}
-.hero-facts b sup{font-size:.55em;}
-.hero-facts span{font-size:12.5px; letter-spacing:.05em; color:#C9D3DC;}
-@media (max-width:480px){
-  .hero-facts{display:grid; grid-template-columns:1fr 1fr; gap:20px 16px;}
-  .hero-facts div:last-child{grid-column:1 / -1;}
+@media (max-width:820px){
+  .cover-grid{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-/* ---------- INTRO ---------- */
-.intro{padding-block:56px; border-bottom:1px solid var(--line);}
-.intro p{font-size:1.12rem; line-height:1.7; max-width:66ch; color:var(--ink-soft);}
-.intro p strong{color:var(--ink);}
-.intro-name{margin-top:22px; padding:16px 18px; background:var(--paper-raised); border-radius:10px; font-size:.95rem; line-height:1.6; color:var(--ink-soft); border-left:3px solid var(--accent);}
+/* BARRA DE FILTROS */
+.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:6; background:color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter:blur(6px); border-bottom:1px solid var(--line)}
+.bar-inner{display:flex; gap:8px; align-items:center; overflow-x:auto; padding-block:10px; scrollbar-width:none}
+.bar-inner::-webkit-scrollbar{display:none}
+.chip{flex:none; font:500 .86rem var(--f-body); color:var(--ink-2); background:transparent; border:1px solid var(--line); border-radius:999px; padding:7px 14px; cursor:pointer; min-height:38px; white-space:nowrap}
+.chip:hover{border-color:var(--mata); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--mata); border-color:var(--mata); color:var(--sheet)}
+.bar .sep{flex:none; width:1px; height:24px; background:var(--line); margin-inline:4px}
+.bar a.jump{flex:none; font:500 .82rem var(--f-mono); color:var(--terra); text-decoration:none; padding:6px 8px}
 
-/* ---------- NAV ---------- */
-.monthnav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
-.monthnav-inner{
-  max-width:920px; margin-inline:auto; padding:12px 20px; display:flex; gap:8px;
-  overflow-x:auto; scrollbar-width:none;
-  -webkit-mask-image:linear-gradient(to right, black calc(100% - 32px), transparent);
-  mask-image:linear-gradient(to right, black calc(100% - 32px), transparent);
+/* SEÇÕES */
+section.block{padding-block:64px; border-bottom:1px solid var(--line)}
+.sec-head{max-width:68ch; margin-bottom:32px}
+.sec-head .kicker{color:var(--terra)}
+.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.4rem); font-weight:600; margin:10px 0 12px}
+.sec-head p{color:var(--ink-2); margin:0}
+
+/* PROJETOS */
+.projects{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:14px}
+.proj{background:var(--sheet); border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:transform .2s ease, box-shadow .2s ease}
+.proj:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+.proj img{aspect-ratio:16/10; width:100%; object-fit:cover}
+.proj div{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px; min-width:0}
+.proj h3{font-size:1.15rem; font-weight:600}
+.proj p{margin:0; font-size:.92rem; color:var(--ink-2)}
+.proj .mono{color:var(--terra)}
+
+/* LINHA DO TEMPO */
+.year{display:flex; align-items:baseline; gap:18px; margin:24px 0 8px; padding-top:24px}
+.year h2{font-size:clamp(3.2rem,9vw,6rem); font-style:italic; font-weight:400; color:var(--terra); line-height:1}
+.year p{margin:0; color:var(--ink-2); max-width:52ch}
+.month{font-family:var(--f-mono); font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mata); margin:40px 0 4px; padding-bottom:8px; border-bottom:2px solid var(--mata)}
+.entry{display:grid; grid-template-columns:150px minmax(0,1fr); gap:28px; padding-block:30px; border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0}
+.stamp{display:flex; flex-direction:column; gap:8px; align-items:flex-start}
+.stamp .date{font-family:var(--f-mono); font-size:.82rem; color:var(--ink); border:1.5px solid var(--terra); color:var(--terra); padding:3px 8px; border-radius:3px; transform:rotate(-2deg); font-variant-numeric:tabular-nums; white-space:nowrap}
+.tag{font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2)}
+.body{min-width:0}
+.body h3{font-size:1.45rem; font-weight:600; margin-bottom:8px}
+.body p{margin:0 0 10px; max-width:68ch}
+.who{font-size:.9rem; color:var(--ink-2); margin:0 0 14px !important}
+.who strong{color:var(--ink); font-weight:600}
+.list{margin:6px 0 14px; padding:0; list-style:none; display:grid; gap:6px; max-width:72ch}
+.list li{display:grid; grid-template-columns:minmax(110px,170px) minmax(0,1fr); gap:12px; font-size:.92rem; padding:6px 0; border-top:1px dashed var(--line)}
+.list li b{font-weight:600}
+.list li span{color:var(--ink-2)}
+blockquote{margin:12px 0 14px; padding:14px 18px; background:var(--mata-soft); border-radius:0 6px 6px 0; border-left:3px solid var(--mata); max-width:68ch}
+blockquote p{font-family:var(--f-display); font-style:italic; font-size:1.05rem; margin:0 0 6px !important}
+blockquote cite{font-style:normal; font-size:.82rem; color:var(--ink-2)}
+.links{display:flex; flex-wrap:wrap; gap:8px 16px; font-size:.9rem; margin:0 0 12px}
+.photos{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); grid-auto-flow:dense; gap:6px; margin-top:6px}
+.ph{padding:0; border:0; margin:0; background:var(--line); border-radius:4px; overflow:hidden; aspect-ratio:4/3; cursor:zoom-in; max-width:100%}
+.ph img{width:100%; height:100%; object-fit:cover; transition:transform .3s ease}
+.ph:hover img{transform:scale(1.04)}
+.photos.many .ph:first-child{grid-column:span 2; grid-row:span 2}
+.vids{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; margin-top:12px}
+.vid{margin:0; background:var(--sheet); border:1px solid var(--line); border-radius:6px; overflow:hidden}
+.vid video{width:100%; max-height:420px; aspect-ratio:auto; background:#000; display:block}
+.vid figcaption{font-size:.82rem; color:var(--ink-2); padding:8px 10px}
+.vid figcaption::before{content:"▶ "; color:var(--terra)}
+.empty{padding:40px 0; color:var(--ink-2)}
+.entry.nota{padding-block:16px; background:linear-gradient(90deg, transparent 0 150px, var(--terra-soft) 150px); border-radius:0 8px 8px 0}
+.entry.nota .body{padding:2px 16px 4px}
+.entry.nota .body h3{font-size:1.08rem; margin-bottom:4px}
+.entry.nota .body h3::before{content:"Nota · "; font:500 .72rem var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--terra); vertical-align:2px}
+.entry.nota .body p{font-size:.93rem}
+.entry.nota .photos{grid-template-columns:repeat(auto-fill,96px)}
+@media (max-width:680px){ .entry.nota{background:var(--terra-soft); border-radius:8px; padding-inline:12px} .entry.nota .body{padding:0} }
+@media (max-width:680px){
+  .entry{grid-template-columns:1fr; gap:12px}
+  .stamp{flex-direction:row; flex-wrap:wrap; align-items:center}
+  .list li{grid-template-columns:1fr; gap:0}
+  .photos{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-.monthnav-inner::-webkit-scrollbar{display:none;}
-.monthnav a{flex:none; display:inline-flex; align-items:baseline; gap:6px; min-height:40px; font-size:13px; letter-spacing:.03em; padding:0 14px; border-radius:999px; border:1px solid var(--line); text-decoration:none; color:var(--ink-soft); white-space:nowrap;}
-.monthnav a:hover{border-color:var(--accent); color:var(--accent-deep);}
-.pill-num{font-size:11px; font-weight:700; color:var(--accent-deep); font-variant-numeric:tabular-nums;}
 
-/* ---------- MONTH ---------- */
-.month{max-width:920px; margin-inline:auto; padding-inline:20px; padding-block:64px; border-bottom:1px solid var(--line);}
-.month-head{max-width:66ch; margin-bottom:36px;}
-.eyebrow{display:flex; align-items:center; gap:10px; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-deep); margin-bottom:14px; font-weight:600;}
-.mo-num{display:inline-flex; align-items:center; justify-content:center; min-width:26px; height:26px; padding-inline:4px; border-radius:999px; background:var(--accent); color:#241000; font-family:"Fraunces",serif; font-style:normal; font-size:12.5px; font-weight:700; letter-spacing:0; font-variant-numeric:tabular-nums;}
-.month h2{font-size:clamp(1.6rem,3.4vw,2.3rem); margin:0 0 14px; font-weight:600;}
-.month-intro{color:var(--ink-soft); font-size:1.05rem; line-height:1.65; margin:0;}
+/* PESSOAS */
+.people{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:28px 36px}
+.group h3{font-family:var(--f-mono); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--terra); margin-bottom:10px; font-weight:500}
+.group ul{list-style:none; margin:0; padding:0}
+.group li{padding:8px 0; border-top:1px solid var(--line); display:flex; flex-direction:column}
+.group li b{font-family:var(--f-display); font-weight:600; font-size:1.02rem}
+.group li span{font-size:.86rem; color:var(--ink-2)}
 
-.momento{margin-top:38px; padding-top:34px; border-top:1px solid var(--line);}
-.momento:first-of-type{padding-top:0; border-top:0;}
-.momento h3{font-size:1.35rem; margin:0 0 6px; font-weight:600; font-style:italic; color:var(--ink); letter-spacing:.005em;}
-.legenda{color:var(--ink-soft); font-size:.98rem; line-height:1.55; max-width:60ch; margin:0 0 14px;}
-.ord{font-size:.68em; text-decoration:underline; text-underline-offset:.12em; text-decoration-thickness:1px;}
+/* VOZES */
+.voices{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px}
+.voice{background:var(--sheet); border:1px solid var(--line); border-radius:6px; padding:20px 22px; margin:0}
+.voice p{font-family:var(--f-display); font-style:italic; font-size:1.08rem; line-height:1.5; margin:0 0 12px}
+.voice footer{font-size:.84rem; color:var(--ink-2)}
+.voice footer b{color:var(--ink)}
 
-.grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:6px;}
-.grid:has(> .ph:only-child){max-width:460px;}
-.grid:has(> .ph:nth-child(2):last-child){max-width:620px;}
-.ph{border:0; padding:0; margin:0; background:var(--paper-raised); border-radius:8px; overflow:hidden; cursor:zoom-in; aspect-ratio:4/3; position:relative;}
-.ph img{width:100%; height:100%; object-fit:cover; transition:transform .35s ease;}
-.ph:hover img{transform:scale(1.045);}
-.ph-lg{grid-column:span 2; grid-row:span 2;}
-@media (max-width:520px){ .ph-lg{grid-column:span 2; grid-row:span 1;} }
+.press{list-style:none; padding:0; margin:0; display:grid; gap:0; max-width:820px}
+.press li{display:grid; grid-template-columns:110px minmax(0,1fr); gap:16px; padding:12px 0; border-top:1px solid var(--line)}
+.press li .mono{color:var(--ink-2); padding-top:3px}
 
-.quote{margin:44px 0 0; padding:26px 24px; background:var(--paper-raised); border-left:3px solid var(--accent); border-radius:0 10px 10px 0;}
-.quote p{font-family:"Fraunces",serif; font-style:italic; font-size:1.15rem; line-height:1.55; margin:0 0 10px; color:var(--ink);}
-.quote cite{font-size:.85rem; color:var(--ink-soft); font-style:normal;}
+footer.end{padding-block:48px; color:var(--ink-2); font-size:.9rem}
+footer.end p{max-width:72ch}
 
-/* ---------- CLOSING ---------- */
-.closing{padding-block:72px; background:var(--paper-raised);}
-.closing .wrap{max-width:760px;}
-.closing .display{font-size:clamp(1.9rem,4vw,2.6rem); margin:0 0 20px; font-weight:600;}
-.closing p{font-size:1.08rem; line-height:1.7; color:var(--ink-soft); max-width:62ch;}
-.closing .quote{background:var(--paper); margin-top:32px;}
+/* LIGHTBOX */
+.lb{position:fixed; inset:0; z-index:20; background:rgba(6,14,9,.94); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:calc(16px + env(safe-area-inset-top,0px)) max(16px, env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px, env(safe-area-inset-left,0px))}
+.lb img{max-width:min(1200px,100%); max-height:78vh; object-fit:contain; border-radius:4px}
+.lb p{color:#E5ECE4; font-size:.92rem; margin:12px 0 0; text-align:center; max-width:70ch}
+.lb button{position:absolute; background:rgba(255,255,255,.12); color:#fff; border:0; border-radius:999px; width:46px; height:46px; font-size:1.3rem; cursor:pointer}
+.lb .x{top:calc(14px + env(safe-area-inset-top,0px)); right:max(14px, env(safe-area-inset-right,0px))}
+.lb .prev{left:max(10px, env(safe-area-inset-left,0px)); top:50%}
+.lb .next{right:max(10px, env(safe-area-inset-right,0px)); top:50%}
+/* ===== Revisão de direção de arte (Fable) ===== */
+/* faixas de cor por seção */
+section.block{border:0}
+#projetos{background:var(--navy-50)}
+#mapa,#vozes{background:var(--cream)}
+#proximos{background:var(--navy); color:#fff}
+#proximos .sec-head h2,#proximos .next h3{color:#fff}
+#proximos .sec-head p,#proximos .next p{color:#C9D3DE}
+#proximos .kicker{color:var(--orange)}
+#proximos .kicker::before{color:#fff}
+#proximos .next div{background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.2)}
+footer.end{background:var(--navy-800); color:#C9D3DE}
+footer.end b{color:#fff}
+.cover{border-bottom:0}
+/* hierarquia */
+.kicker,.sec-head .kicker{font-size:.8rem; font-weight:500; color:var(--navy)}
+.kicker::before{content:"— "; color:var(--orange)}
+.cha .kicker{color:#fff} .cha .kicker::before{color:var(--orange)}
+.body h3{font-size:1.55rem}
+.tag{font-size:.76rem; color:var(--ink-2)}
+.sec-head h2::after{content:""; display:block; width:48px; height:4px; border-radius:2px; background:var(--orange); margin-top:14px; transform:scaleX(0); transform-origin:left; transition:transform .6s cubic-bezier(.2,.8,.2,1) .1s}
+section.in .sec-head h2::after,section:not(.pre) .sec-head h2::after{transform:none}
+section.pre .sec-head h2::after{transform:scaleX(0)}
+.proj{border-color:var(--line)} .proj:hover{border-color:var(--line-strong)}
+.voice{border-color:var(--cream-200); background:#fff}
+blockquote{background:var(--cream); border-left-color:var(--orange)}
+.entry.nota{background:linear-gradient(90deg, transparent 0 150px, var(--cream) 150px)}
+.entry.nota .body h3::before{color:var(--orange-text)}
+.month{color:#fff; background:var(--navy); border:0; display:inline-block; padding:6px 14px; border-radius:3px; letter-spacing:.16em}
+.year h2{color:var(--orange-text)}
 
-.teachers{list-style:none; margin:34px 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px 24px;}
-.teachers li{padding-block:10px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:2px;}
-.tname{font-family:"Fraunces",serif; font-weight:500; font-size:1.02rem;}
-.trole{font-size:.82rem; color:var(--ink-soft); letter-spacing:.02em;}
+/* barra de filtros: marcador deslizante, contagem, bordas e setas */
+.bar{background:var(--navy-50); border-bottom:2px solid var(--navy); backdrop-filter:none; transition:box-shadow .25s}
+.bar.stuck{box-shadow:0 8px 18px -12px rgba(24,49,73,.55)}
+.bar-shell{position:relative}
+.bar-inner{position:relative; gap:6px; scroll-behavior:auto}
+.chip{position:relative; z-index:1; color:var(--navy); background:#fff; border:1.5px solid var(--line-strong); font-weight:600; padding:7px 10px 7px 14px; transition:color .3s, border-color .2s}
+.chip:hover{border-color:var(--navy); color:var(--navy)}
+.chip[aria-pressed="true"]{background:transparent; border-color:transparent; color:#fff}
+.chip i{font:600 .68rem var(--f-mono); font-style:normal; margin-left:6px; padding:1px 6px; border-radius:999px; background:var(--navy-100); color:var(--navy)}
+.chip[aria-pressed="true"] i{background:var(--orange); color:var(--navy)}
+.chip-ind{position:absolute; top:10px; left:0; height:38px; width:0; border-radius:999px; background:var(--navy); z-index:0; transition:transform .45s cubic-bezier(.3,1.25,.35,1), width .45s cubic-bezier(.3,1.25,.35,1)}
+.bar .jump{color:var(--navy)!important; font-weight:600}
+.bar-shell::before,.bar-shell::after{content:""; position:absolute; top:0; bottom:0; width:40px; pointer-events:none; z-index:2; transition:opacity .2s}
+.bar-shell::before{left:0; background:linear-gradient(90deg,var(--navy-50),transparent)}
+.bar-shell::after{right:0; background:linear-gradient(270deg,var(--navy-50),transparent)}
+.bar-shell.at-start::before,.bar-shell.at-end::after{opacity:0}
+.bar-arrow{position:absolute; top:50%; translate:0 -50%; z-index:3; width:30px; height:30px; border-radius:50%; border:0; background:var(--navy); color:#fff; cursor:pointer; font-size:1rem; line-height:1}
+.bar-arrow.l{left:0}.bar-arrow.r{right:0}
+.bar-shell.at-start .l,.bar-shell.at-end .r{display:none}
+@media (max-width:680px){ .bar-arrow{display:none} }
 
-.footer{padding-block:40px; text-align:center;}
-.footer img{height:22px; margin-inline:auto; margin-bottom:14px; opacity:.85;}
-.footer p{font-size:.82rem; color:var(--ink-soft); margin:4px 0;}
-.footer .totop{display:inline-block; margin-top:18px; font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent-deep); text-decoration:none; border-bottom:1px solid transparent;}
-.footer .totop:hover{border-color:var(--accent-deep);}
+/* carimbo do mês que acompanha a leitura */
+.now{position:fixed; right:max(12px, env(safe-area-inset-right,0px)); top:calc(env(safe-area-inset-top,0px) + 70px); z-index:5; font:600 .74rem var(--f-mono); letter-spacing:.1em; text-transform:uppercase; background:var(--orange); color:var(--navy); padding:5px 10px; border-radius:3px; rotate:-2deg; opacity:0; translate:0 -6px; transition:opacity .22s, translate .22s; pointer-events:none}
+.now.show{opacity:1; translate:0}
 
-/* ---------- LIGHTBOX ---------- */
-.lightbox{position:fixed; inset:0; background:rgba(10,18,28,.92); display:none; align-items:center; justify-content:center; z-index:50; padding:28px;}
-.lightbox.open{display:flex;}
-.lightbox img{max-width:100%; max-height:100%; border-radius:6px; box-shadow:var(--shadow);}
-.lightbox-close{position:absolute; top:18px; right:22px; background:none; border:0; color:#fff; font-size:28px; line-height:1; cursor:pointer; padding:6px 10px;}
+/* trilha da linha do tempo e carimbo que bate */
+#timeline{position:relative}
+#timeline::before{content:""; position:absolute; left:163px; top:0; bottom:0; width:2px; background:linear-gradient(var(--navy),var(--navy)) no-repeat; background-size:100% var(--fill,0%); background-color:var(--navy-100)}
+.entry{position:relative}
+.year{position:relative; z-index:1; background:var(--paper); padding-bottom:8px}
+.stamp .date{background:var(--orange); color:var(--navy); border:0; font-weight:600; position:relative; z-index:1; transition:transform .45s cubic-bezier(.2,1.5,.4,1), opacity .25s}
+.entry.pre .stamp .date{transform:rotate(-9deg) scale(1.3); opacity:0}
+@media (max-width:680px){ #timeline::before{display:none} }
 
-@media (prefers-reduced-motion: reduce){ .ph img{transition:none;} }
+/* Chá: luz de palco */
+.stage img{transition:transform 7s ease-out}
+.stage.open img{transform:scale(1.06)}
+.stage::after{content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(65% 75% at 50% 38%, transparent 55%, rgba(13,27,41,.6)); opacity:0; transition:opacity 1.4s .9s}
+.stage.open::after{opacity:1}
+.program{opacity:.35; transition:opacity .8s 1s}
+.stage.open + .program{opacity:1}
+.act[aria-pressed="true"]{translate:0 -2px; box-shadow:0 10px 24px -14px rgba(0,0,0,.8)}
+
+/* cartões em cascata */
+section.pre :is(.proj,.voice,.next div){opacity:0; translate:0 12px}
+:is(.proj,.voice,.next div){transition:opacity .5s, translate .6s cubic-bezier(.2,.8,.2,1), transform .2s ease, box-shadow .2s ease; transition-delay:calc(var(--i,0)*60ms)}
+
+@media (prefers-reduced-motion: reduce){
+  .reel img,.curtain,.chip-ind,.entry .body,.stamp .date,.stage img,.program,.sec-head h2::after{transition:none !important}
+  .flower g{animation:none}
+  #timeline::before{background-size:100% 100%}
+  .program{opacity:1}
+  .entry.pre .stamp .date{transform:rotate(-2deg); opacity:1}
+  section.pre :is(.proj,.voice,.next div){opacity:1; translate:none}
+}
 </style>
-</head>
-<body>
 
-
-<header class="hero" id="topo">
-  <div class="wrap hero-inner">
-    <img class="hero-logo" src="logo_flupp.png" alt="FLUPP, Fundação Lucia e Pelerson Penido">
-    <span class="hero-eyebrow">Cocalinho, Mato Grosso</span>
-    <h1>Rosa Penido, 2026</h1>
-    <p class="lede">Um ano de trabalho contado em fotos: o que os professores da Escola Rosa Penido construíram, mês a mês, dentro e fora da sala de aula.</p>
-    <div class="hero-facts">
-      <div><b>9</b><span>MESES REGISTRADOS</span></div>
-      <div><b>7<sup>a</sup></b><span>EDIÇÃO DO CHÁ LITERÁRIO</span></div>
-      <div><b>10</b><span>PROFISSIONAIS ENVOLVIDOS</span></div>
+<div class="progress" id="progress"></div>
+<header class="cover gut">
+  <svg class="flower" viewBox="0 0 520 520" aria-hidden="true"><g>
+    <circle cx="260" cy="260" r="90"/><circle cx="260" cy="170" r="90"/><circle cx="338" cy="215" r="90"/><circle cx="338" cy="305" r="90"/><circle cx="260" cy="350" r="90"/><circle cx="182" cy="305" r="90"/><circle cx="182" cy="215" r="90"/>
+  </g></svg>
+  <div class="wrap">
+    <div class="brand"><img src="logo_flupp.png" alt="FLUPP, Fundação Lucia e Pelerson Penido" width="160" height="30"><span>Formação Continuada · Portfólio da escola parceira</span></div>
+    <div class="cover-grid">
+      <div>
+        <div class="kicker">Escola Municipal Dona Rosa Penido Dalla Vecchia · Vila Roncador · Cocalinho, MT</div>
+        <h1>Rosa Penido, <em>2025–2026</em></h1>
+        <p class="lede">Dois anos de escola, de abril de 2025 a outubro de 2026: projetos, festas, formações, parcerias e as pessoas que fizeram cada um deles acontecer. Montado a partir das fotos, vídeos e mensagens trocadas no grupo FLUPP – Formação 2025.</p>
+      </div>
+      <figure class="reel" id="reel" aria-label="Fotos em destaque">
+        <figcaption id="reelcap"></figcaption><div class="dots" id="reeldots"></div>
+      </figure>
     </div>
+    <div class="facts" id="facts"></div>
   </div>
 </header>
 
-<section class="intro">
-  <div class="wrap">
-    <p><strong>Todo ano letivo acumula, sem perceber, uma quantidade enorme de trabalho.</strong> Formações, palestras, projetos interdisciplinares, festas, reformas feitas com as próprias mãos, gêneros literários mapeados turma por turma, uma maquete construída com garrafas PET. Nada disso costuma virar registro. Esta página existe para mudar isso: reúne o que a equipe da Escola Rosa Penido, em Cocalinho, viveu e produziu ao longo de 2026, tal como foi sendo compartilhado, semana após semana, pela própria equipe.</p>
-    <div class="intro-name">A escola leva o nome de Rosa Penido Dalla Vecchia, fundadora da FLUPP (Fundação Lucia e Pelerson Penido), parceira da rede na formação continuada dos professores. O trabalho registrado aqui carrega, portanto, o mesmo nome de quem primeiro apostou que educação era a ideia mais forte.</div>
-  </div>
-</section>
-
-<nav class="monthnav" aria-label="Navegar pelos meses"><div class="monthnav-inner"><a href="#jan"><span class="pill-num">01</span>Janeiro</a><a href="#fev"><span class="pill-num">02</span>Fevereiro</a><a href="#mar"><span class="pill-num">03</span>Março</a><a href="#abr"><span class="pill-num">04</span>Abril</a><a href="#mai"><span class="pill-num">05</span>Maio</a><a href="#jun"><span class="pill-num">06</span>Junho</a><a href="#jul"><span class="pill-num">07</span>Julho</a><a href="#ago"><span class="pill-num">08</span>Agosto</a><a href="#set"><span class="pill-num">09</span>Setembro</a></div></nav>
+<nav class="bar gut" aria-label="Filtros">
+  <div class="wrap bar-shell at-start" id="barShell"><div class="bar-inner" id="chips"></div></div>
+</nav>
 
 <main>
-<section class="month" id="jan"><div class="month-head"><span class="eyebrow"><span class="mo-num">01</span>Janeiro &middot; 2026</span><h2>Um novo ano começa em Cuiabá</h2><p class="month-intro">O ano letivo de 2026 começou antes mesmo de as aulas terem início: com dois dias de formação da Seduc-MT, em Cuiabá, reunindo profissionais de toda a rede estadual.</p></div><div class="momento"><h3>Semana Pedagógica da Seduc-MT</h3><p class="legenda">Dois dias de oficinas, tertúlia literária e reencontro com colegas de outras escolas da rede, encerrados com a cerimônia de posse dos novos servidores aprovados em concurso.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260120-WA0056.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0056.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0058.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0058.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0060.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0060.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0061.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0061.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0066.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0066.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0083.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0083.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button><button class="ph" data-full="fotos/IMG-20260120-WA0089.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260120-WA0089.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Janeiro"></button></div></div></section><section class="month" id="fev"><div class="month-head"><span class="eyebrow"><span class="mo-num">02</span>Fevereiro &middot; 2026</span><h2>Portas abertas de novo</h2><p class="month-intro">As aulas recomeçaram e, nas semanas seguintes, vieram as avaliações diagnósticas: o ponto de partida para pensar o ano de cada turma.</p></div><div class="momento"><h3>Primeiro dia de aula</h3><p class="legenda">Turmas recebidas de volta com carinho, no primeiro dia de aula.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260202-WA0006.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260202-WA0006.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Fevereiro"></button><button class="ph" data-full="fotos/IMG-20260202-WA0007.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260202-WA0007.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Fevereiro"></button><button class="ph" data-full="fotos/IMG-20260202-WA0008.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260202-WA0008.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Fevereiro"></button><button class="ph" data-full="fotos/IMG-20260202-WA0010.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260202-WA0010.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Fevereiro"></button></div></div></section><section class="month" id="mar"><div class="month-head"><span class="eyebrow"><span class="mo-num">03</span>Março &middot; 2026</span><h2>Parcerias, cuidado e consciência</h2><p class="month-intro">Março trouxe uma palestra sobre o mundo animal e vegetal, uma reforma feita com as próprias mãos da equipe, o Dia da Água e uma aula de educação física para não esquecer.</p></div><div class="momento"><h3>Palestra do INDEA</h3><p class="legenda">Uma conversa sobre saúde animal e vegetal, voltada às turmas a partir do 4<sup class="ord">o</sup> ano.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260305-WA0007.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260305-WA0007.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260305-WA0012.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260305-WA0012.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260305-WA0015.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260305-WA0015.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260305-WA0019.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260305-WA0019.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260305-WA0023.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260305-WA0023.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button></div></div><div class="momento"><h3>Toda a equipe em movimento</h3><p class="legenda">Organização e cuidado com os espaços da escola, sempre em conjunto.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260309-WA0000.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260309-WA0000.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260309-WA0004.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260309-WA0004.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260309-WA0006.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260309-WA0006.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button></div></div><div class="momento"><h3>Armários novos na cozinha</h3><p class="legenda">Adquiridos com os recursos de um evento organizado pela própria equipe da Rosa Penido.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260319-WA0001.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260319-WA0001.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260319-WA0002.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260319-WA0002.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260319-WA0004.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260319-WA0004.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260319-WA0006.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260319-WA0006.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button></div></div><div class="momento"><h3>Dia Mundial da Água</h3><p class="legenda">Orientação sobre o consumo consciente da água com o Ensino Médio, no dia 22 de março.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260323-WA0009.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260323-WA0009.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260323-WA0011.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260323-WA0011.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260323-WA0013.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260323-WA0013.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260323-WA0017.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260323-WA0017.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260323-WA0018.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260323-WA0018.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button></div></div><div class="momento"><h3>Jogos populares brasileiros</h3><p class="legenda">Aula de Educação Física com o Ensino Médio: jogos populares e guerra de balões.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260327-WA0001.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260327-WA0001.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260327-WA0003.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260327-WA0003.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button><button class="ph" data-full="fotos/IMG-20260327-WA0004.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260327-WA0004.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Março"></button></div></div></section><section class="month" id="abr"><div class="month-head"><span class="eyebrow"><span class="mo-num">04</span>Abril &middot; 2026</span><h2>Cidadania e o gosto pela leitura</h2><p class="month-intro">Em abril, a escola ganhou um cantinho novo, inaugurado pelos próprios estudantes, e recebeu o Conselho Tutelar para falar de direitos e cuidado.</p></div><div class="momento"><h3>Palestra do Conselho Tutelar</h3><p class="legenda">Uma conversa importante sobre direitos e proteção, levada até a escola.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260409-WA0007.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260409-WA0007.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260409-WA0008.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260409-WA0008.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260409-WA0009.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260409-WA0009.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button></div></div><div class="momento"><h3>Saúde em sala</h3><p class="legenda">Equipe de saúde do município na escola para conversar com as turmas do Ensino Médio e para aferir peso e altura.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260415-WA0018.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260415-WA0018.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260415-WA0025.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260415-WA0025.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button></div></div><div class="momento"><h3>21 de abril</h3><p class="legenda">Descobrindo, em sala, o motivo de 21 de abril ser feriado.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260416-WA0005.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260416-WA0005.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button></div></div><div class="momento"><h3>Preparando o Cantinho da Leitura</h3><p class="legenda">Organizado com carinho pela equipe, antes de receber as turmas.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260415-WA0027.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260415-WA0027.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260423-WA0011.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260423-WA0011.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button></div></div><div class="momento"><h3>Inauguração do Cantinho da Leitura</h3><p class="legenda">Inaugurado pelos próprios estudantes. A partir dali, cada turma passou a ter 30 minutos semanais dedicados à leitura literária, com contação de histórias e leitura de imagens para os menores.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260424-WA0025.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0025.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260424-WA0014.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0014.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260424-WA0016.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0016.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260424-WA0020.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0020.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260424-WA0017.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0017.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button><button class="ph" data-full="fotos/IMG-20260424-WA0024.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260424-WA0024.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Abril"></button></div></div></section><section class="month" id="mai"><div class="month-head"><span class="eyebrow"><span class="mo-num">05</span>Maio &middot; 2026</span><h2>Homenagens e o início de um grande projeto</h2><p class="month-intro">Maio começou com uma festa para as mães e terminou com a mobilização de toda a escola em torno de um novo projeto: o Meio Ambiente.</p></div><div class="momento"><h3>Festa das Mães</h3><p class="legenda">Café da manhã, apresentações e bingo em homenagem às mães da comunidade escolar.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260515-WA0017.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0017.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260515-WA0021.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0021.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260515-WA0024.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0024.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260515-WA0027.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0027.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260515-WA0030.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0030.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260515-WA0033.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260515-WA0033.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button></div></div><div class="momento"><h3>Abrindo o projeto de Meio Ambiente</h3><p class="legenda">Palestra com Junior, da Fazenda Água Viva, dando início ao grande projeto interdisciplinar do semestre.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260528-WA0003.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260528-WA0003.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260528-WA0004.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260528-WA0004.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button><button class="ph" data-full="fotos/IMG-20260528-WA0026.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260528-WA0026.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button></div></div><div class="momento"><h3>Primeiras produções</h3><p class="legenda">Produções do 8<sup class="ord">o</sup> e 9<sup class="ord">o</sup> ano sobre o tema do meio ambiente.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260529-WA0006.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260529-WA0006.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Maio"></button></div></div></section><section class="month" id="jun"><div class="month-head"><span class="eyebrow"><span class="mo-num">06</span>Junho &middot; 2026</span><h2>O caminho da água</h2><p class="month-intro">Junho foi o mês em que o projeto de Meio Ambiente tomou conta da escola inteira, da Educação Infantil ao Ensino Médio, dentro da sala de aula e além dos seus muros.</p></div><div class="momento"><h3>Anos Iniciais dão a largada</h3><p class="legenda">Início dos trabalhos sobre meio ambiente com as turmas dos Anos Iniciais.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260603-WA0033.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260603-WA0033.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260603-WA0034.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260603-WA0034.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260603-WA0035.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260603-WA0035.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Papel semente</h3><p class="legenda">Preparativos para o Dia do Meio Ambiente: produção de papel semente e ensaios de apresentação.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260608-WA0037.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260608-WA0037.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260608-WA0043.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260608-WA0043.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260608-WA0045.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260608-WA0045.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260608-WA0047.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260608-WA0047.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260609-WA0010.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260609-WA0010.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260609-WA0011.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260609-WA0011.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>A maquete: o caminho da água</h3><p class="legenda">Os Anos Iniciais construíram, com garrafas PET, a maquete que empresta o nome ao projeto do semestre.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260610-WA0034.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260610-WA0034.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260610-WA0040.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260610-WA0040.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260610-WA0043.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260610-WA0043.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260610-WA0051.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260610-WA0051.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260610-WA0125.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260610-WA0125.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Coleta seletiva na vila</h3><p class="legenda">Pintura dos pneus da maquete e entrega, na vila, dos panfletos de coleta seletiva produzidos pelos próprios estudantes.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260611-WA0051.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260611-WA0051.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260611-WA0055.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260611-WA0055.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260611-WA0062.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260611-WA0062.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260611-WA0072.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260611-WA0072.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260611-WA0153.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260611-WA0153.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Culminância na Fazenda Água Viva</h3><p class="legenda">Da Educação Infantil ao Ensino Médio: de onde vem a água, produção de papel semente, fossas sustentáveis (inclusive a fossa de bananeira) e compostagem.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260612-WA0019.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0019.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260612-WA0021.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0021.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260612-WA0023.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0023.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260612-WA0024.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0024.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260612-WA0027.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0027.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260612-WA0032.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0032.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Uma doação da FLUPP</h3><p class="legenda">Uma bicicleta doada pela FLUPP para a rifa da formatura de 2026.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260612-WA0048.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260612-WA0048.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Pães da Karolliny</h3><p class="legenda">Um lanche feito com carinho para toda a equipe.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260615-WA0026.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260615-WA0026.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Conferência dos Direitos da Criança e do Adolescente</h3><p class="legenda">Estudantes da Rosa Penido participaram da 5<sup class="ord">a</sup> Conferência Municipal, em Cocalinho, com representantes eleitos para a etapa estadual em Cuiabá.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260616-WA0056.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260616-WA0056.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260616-WA0060.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260616-WA0060.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260616-WA0062.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260616-WA0062.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Preparativos da Festa Junina</h3><p class="legenda">Bastidores da decoração feita com o Ensino Médio: painel, bolo cenográfico e os bonecos caipiras Clara e Gema. Entre uma atividade e outra, o almoço de sempre.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260622-WA0015.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260622-WA0015.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260623-WA0008.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260623-WA0008.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260624-WA0105.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260624-WA0105.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260624-WA0104.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260624-WA0104.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div><div class="momento"><h3>Fanfarra na extensão Calcário Roncador</h3><p class="legenda">Um dia de aprendizado com muita diversão, com a presença da fanfarra municipal e apresentações de dança.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260630-WA0036.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260630-WA0036.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260630-WA0039.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260630-WA0039.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260630-WA0063.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260630-WA0063.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260630-WA0066.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260630-WA0066.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button><button class="ph" data-full="fotos/IMG-20260630-WA0070.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260630-WA0070.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Junho"></button></div></div></section><section class="month" id="jul"><div class="month-head"><span class="eyebrow"><span class="mo-num">07</span>Julho &middot; 2026</span><h2>Uma pausa para respirar</h2><p class="month-intro">O primeiro semestre se encerrou com os primeiros preparativos do Chá Literário e uma mensagem que resume bem o espírito do ano: reconhecer o caminho já percorrido, para seguir construindo o que falta.</p></div><div class="momento"><h3>Preparativos do Chá Literário</h3><p class="legenda">As primeiras ideias para o evento que fecharia o segundo semestre com chave de ouro.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260701-WA0004.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260701-WA0004.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Julho"></button><button class="ph" data-full="fotos/IMG-20260701-WA0005.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260701-WA0005.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Julho"></button></div></div><blockquote class="quote"><p>&ldquo;Chegamos a este momento de pausa com a sensação de que construímos, juntos, um caminho importante neste primeiro semestre. Foi muito significativo ver a equipe pensando a escola como um todo, da Educação Infantil ao Ensino Médio.&rdquo;</p><cite>Vanuse Ribeiro, coordenação FLUPP</cite></blockquote></section><section class="month" id="ago"><div class="month-head"><span class="eyebrow"><span class="mo-num">08</span>Agosto &middot; 2026</span><h2>De volta, com os Gêneros Literários</h2><p class="month-intro">O segundo semestre recomeçou com o mapeamento dos gêneros literários trabalhados em cada turma e os primeiros preparativos do VII Chá Literário.</p></div><div class="momento"><h3>Volta às aulas</h3><p class="legenda">O segundo semestre começou, com a Rosa Penido pronta para recebê-lo.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260804-WA0018.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260804-WA0018.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260804-WA0020.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260804-WA0020.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260804-WA0026.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260804-WA0026.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260805-WA0124.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260805-WA0124.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button></div></div><div class="momento"><h3>Entrega do uniforme escolar</h3><p class="legenda">O novo uniforme do município chegou às mãos dos estudantes.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260806-WA0011.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260806-WA0011.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260806-WA0056.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260806-WA0056.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260807-WA0001.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260807-WA0001.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260811-WA0020.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260811-WA0020.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button></div></div><div class="momento"><h3>As obras do VII Chá Literário</h3><p class="legenda">Continuidade das obras que dariam vida à ambientação do evento.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260825-WA0006.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260825-WA0006.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260825-WA0007.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260825-WA0007.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260825-WA0008.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260825-WA0008.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button><button class="ph" data-full="fotos/IMG-20260826-WA0021.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260826-WA0021.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Agosto"></button></div></div></section><section class="month" id="set"><div class="month-head"><span class="eyebrow"><span class="mo-num">09</span>Setembro &middot; 2026</span><h2>Cultura, cuidado e a chegada do VII Chá Literário</h2><p class="month-intro">O ano se encaminhou para o seu ponto alto: entre a cultura brasileira, o cuidado do Setembro Amarelo e os últimos preparativos, a Rosa Penido se preparou para receber a comunidade no VII Chá Literário.</p></div><div class="momento"><h3>Formação pedagógica em curso</h3><p class="legenda">Mais um encontro de formação com a FLUPP, revendo o caminho percorrido desde o diagnóstico até as evidências de aprendizagem.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260901-WA0077.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260901-WA0077.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260901-WA0081.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260901-WA0081.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260901-WA0084.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260901-WA0084.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Cultura brasileira no pátio</h3><p class="legenda">Amarelinha desenhada no chão para lembrar, na prática, das brincadeiras populares que fazem parte da cultura brasileira.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260904-WA0072.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260904-WA0072.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260904-WA0074.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260904-WA0074.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260904-WA0080.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260904-WA0080.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260904-WA0096.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260904-WA0096.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Bafo da leitura</h3><p class="legenda">Um jogo para quem gosta de brincar e de ler, ao mesmo tempo.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260909-WA0073.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260909-WA0073.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260909-WA0076.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260909-WA0076.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260909-WA0080.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260909-WA0080.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Setembro Amarelo</h3><p class="legenda">Roda de conversa, escrita e leitura. No painel da escola, cada estudante deixou sua mensagem de carinho, esperança e valorização da vida.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260910-WA0050.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260910-WA0050.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260910-WA0051.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260910-WA0051.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260910-WA0052.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260910-WA0052.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260910-WA0053.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260910-WA0053.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Ciência na prática</h3><p class="legenda">Um experimento com leite e vinagre para falar de alimentação saudável e de cuidado com o que se mistura.</p><div class="grid"><button class="ph" data-full="fotos/IMG-20260911-WA0007.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260911-WA0007.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Reta final do VII Chá Literário</h3><p class="legenda">Continuidade dos preparativos, com o tema da redação do PND 2026 também em pauta nas formações.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260913-WA0064.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260913-WA0064.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260916-WA0070.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260916-WA0070.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260916-WA0068.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260916-WA0068.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260921-WA0037.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260921-WA0037.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260921-WA0041.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260921-WA0041.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260921-WA0040.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260921-WA0040.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Comidas típicas e ervas medicinais</h3><p class="legenda">Saberes da própria região, trazidos de casa por cada estudante.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260918-WA0017.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260918-WA0017.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260918-WA0019.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260918-WA0019.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260918-WA0018.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260918-WA0018.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260918-WA0020.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260918-WA0020.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div><div class="momento"><h3>Nos preparativos finais</h3><p class="legenda">A véspera do VII Chá Literário, marcado para o dia 24 de setembro, às 19h, no pátio da escola.</p><div class="grid"><button class="ph ph-lg" data-full="fotos/IMG-20260923-WA0008.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0008.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260923-WA0021.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0021.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260923-WA0026.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0026.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260923-WA0080.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0080.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260923-WA0085.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0085.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button><button class="ph" data-full="fotos/IMG-20260923-WA0086.jpg" aria-label="Ampliar foto"><img src="fotos/IMG-20260923-WA0086.jpg" loading="lazy" alt="Registro fotográfico de atividade na Escola Rosa Penido, Setembro"></button></div></div></section>
+  <section class="block gut" id="percurso">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Percurso formativo</div>
+        <h2>A formação continuada mês a mês</h2>
+        <p>Os encontros e orientações da FLUPP registrados no grupo, de abril de 2025 a setembro de 2026. Toque em um item para ver o registro completo.</p>
+      </div>
+      <div class="path-wrap"><table class="path" id="path"></table></div>
+    </div>
+  </section>
+
+  <section class="block gut" id="projetos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Os projetos</div>
+        <h2>O que atravessou os dois anos</h2>
+        <p>Alguns trabalhos voltaram em 2026 mais fortes do que em 2025. Toque em um projeto para ir até os registros dele na linha do tempo.</p>
+      </div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="cha gut" id="especial-cha">
+    <div class="wrap">
+      <div class="kicker mono">Especial · 24 de setembro de 2026</div>
+      <h2>VII Chá Literário</h2>
+      <p class="intro">A noite em que as turmas levaram ao pátio o que leram no ano. Abra a cortina e escolha uma apresentação para ver quem fez, o que leu e como foi.</p>
+      <div class="stage" id="stage">
+        <img src="fotos/20260924-0062.jpg" alt="Corredor de entrada do VII Chá Literário no pátio, com personagens e letras coloridas no chão">
+        <div class="curtain l"></div><div class="curtain r"></div>
+        <button class="open-btn" id="openStage">Abrir a cortina</button>
+      </div>
+      <div class="program" id="program" role="group" aria-label="Programa da noite"></div>
+      <div class="act-detail" id="actDetail" aria-live="polite"></div>
+      <div class="cha-links">
+        <a href="#cha-vii-prep">A preparação</a><a href="#cha-vii-bastidores">Bastidores e cozinha</a><a href="#cha-vii">A noite completa</a><a href="#cha-vii-vozes">Entrevistas</a><a href="#cha-vi">Como foi o VI Chá, em 2025</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block gut" id="mapa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Mapa dos meses</div>
+        <h2>Quanto aconteceu em cada mês</h2>
+        <p>Cada barra é um mês, e a altura é o número de momentos registrados. Toque em uma barra para ir até aquele mês.</p>
+      </div>
+      <div class="mscroll"><div class="months" id="months"></div></div>
+      <div class="months-key"><span><i style="background:var(--mata)"></i>momentos no mês</span><span><i style="background:var(--ipe)"></i>mês de Chá Literário</span></div>
+    </div>
+  </section>
+
+  <section class="block gut" id="linha">
+    <div class="wrap" id="timeline"></div>
+  </section>
+
+  <section class="block gut" id="proximos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Desafios e próximos passos</div>
+        <h2>O que vem a seguir</h2>
+        <p>Metas do plano de ação apresentadas pela FLUPP no balanço do primeiro semestre de 2026 e desafios que aparecem nos próprios registros.</p>
+      </div>
+      <div class="next">
+        <div><h3>Alfabetização e leitura</h3><p>Fortalecer a alfabetização, a leitura e a escrita, com produções e reescritas textuais quinzenais em todas as áreas.</p></div>
+        <div><h3>Resolução de problemas</h3><p>Ler, interpretar e explicar por escrito o raciocínio na Matemática.</p></div>
+        <div><h3>Apoio a cada estudante</h3><p>Duplas produtivas e apoios diferenciados para estudantes em diferentes níveis de aprendizagem.</p></div>
+        <div><h3>Evidências</h3><p>Registrar avanços concretos: pasta sanfonada, planos de aula compartilhados e este portfólio.</p></div>
+        <div><h3>Transporte escolar</h3><p>Na volta às aulas de agosto de 2025, a falta de dois transportes reduziu a presença dos alunos.</p></div>
+        <div><h3>Continuidade da equipe</h3><p>Entre 2025 e 2026 houve trocas de professores. Manter os combinados da formação ajuda quem chega.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block gut" id="pessoas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Quem fez</div>
+        <h2>Todas as pessoas citadas nos registros</h2>
+        <p>Equipe da escola, formadores, parceiros, poder público e estudantes que aparecem nomeados nas mensagens do grupo. Funções conforme descritas nos próprios registros.</p>
+      </div>
+      <div class="people" id="people"></div>
+    </div>
+  </section>
+
+  <section class="block gut" id="vozes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Vozes</div>
+        <h2>O que foi dito ao longo do caminho</h2>
+      </div>
+      <div class="voices" id="voices"></div>
+    </div>
+  </section>
+
+  <section class="block gut" id="imprensa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker mono">Na imprensa e na rede</div>
+        <h2>Onde a escola apareceu</h2>
+      </div>
+      <ul class="press" id="press"></ul>
+    </div>
+  </section>
 </main>
 
-<section class="closing">
+<footer class="end gut">
   <div class="wrap">
-    <h2 class="display">Obrigada, equipe Rosa Penido</h2>
-    <p>Cada foto desta página tem, por trás, um professor ou uma professora que decidiu registrar o que estava fazendo, mesmo no meio de uma rotina cheia. Fica aqui o reconhecimento a cada um dos nomes que tornaram 2026 um ano de tanta produção:</p>
-    <ul class="teachers"><li><span class="tname">Ana Maria Pereira</span><span class="trole">direção e coordenação pedagógica</span></li><li><span class="tname">Vanuse Ribeiro</span><span class="trole">coordenação FLUPP</span></li><li><span class="tname">Jeinneffer Carvalho</span><span class="trole">6<sup class="ord">o</sup> e 7<sup class="ord">o</sup> ano</span></li><li><span class="tname">Edimar Costa dos Santos</span><span class="trole">sala de aula</span></li><li><span class="tname">Naureni de J. Costa</span><span class="trole">Anos Iniciais, classe multisseriada</span></li><li><span class="tname">Laiza Rodrigues</span><span class="trole">Educação Infantil</span></li><li><span class="tname">Rosangela</span><span class="trole">8<sup class="ord">o</sup> e 9<sup class="ord">o</sup> ano</span></li><li><span class="tname">Mauriane Lemes</span><span class="trole">equipe pedagógica</span></li><li><span class="tname">Karolliny Dias</span><span class="trole">equipe pedagógica</span></li><li><span class="tname">Pedro</span><span class="trole">registro e apoio pedagógico</span></li></ul>
-    <blockquote class="quote">
-      <p>&ldquo;A história da Rosa Penido é construída por vocês. E essa história precisa ser reconhecida, respeitada e valorizada.&rdquo;</p>
-      <cite>Vanuse Ribeiro, coordenação FLUPP</cite>
-    </blockquote>
+    <p><b>Fonte:</b> conversa do grupo de WhatsApp "FLUPP – Formação 2025", de 07/04/2025 a 29/10/2026, com 1.165 fotos e 250 vídeos enviados pela equipe. Esta página reúne uma seleção. Os vídeos foram encurtados e comprimidos para carregar rápido.</p>
+    <p><b>Acompanhamento pedagógico:</b> Fundação Lucia e Pelerson Penido (FLUPP), formadores Vanuse Ribeiro e Leonardo Dantas.</p>
   </div>
-</section>
-
-<footer class="footer">
-  <img src="logo_flupp.png" alt="FLUPP">
-  <p>Escola Municipal Dona Rosa Penido Dalla Vecchia &middot; Cocalinho, Mato Grosso</p>
-  <p>Registro produzido a partir dos relatos e fotos compartilhados pela própria equipe ao longo de 2026.</p>
-  <a class="totop" href="#topo">Voltar ao topo</a>
 </footer>
 
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
-  <img id="lightbox-img" src="" alt="Foto ampliada">
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="x" id="lbx" aria-label="Fechar">✕</button>
+  <button class="play" id="lbplay">▶ Apresentação</button>
+  <div class="bar2" id="lbbar"></div>
+  <button class="prev" id="lbp" aria-label="Foto anterior">‹</button>
+  <img id="lbi" alt="">
+  <p id="lbc"></p>
+  <button class="next" id="lbn" aria-label="Próxima foto">›</button>
 </div>
 
 <script>
-(function(){
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.ph').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      lbImg.src = btn.getAttribute('data-full');
-      lb.classList.add('open');
-    });
-  });
-  function closeLb(){ lb.classList.remove('open'); lbImg.src=''; }
-  document.getElementById('lightbox-close').addEventListener('click', closeLb);
-  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLb(); });
-})();
-</script>
+const CATS = {
+  proj:"Projetos de sala", leit:"Leitura e literatura", arte:"Arte e cultura", amb:"Meio ambiente e campo",
+  cid:"Cidadania e saúde", fest:"Comemorações", form:"Formação", com:"Escola e comunidade"
+};
 
-</body>
-</html>
+const E = [
+{"id":"form-abr-2025","d":"2025-04-08","t":"Encontro de formação de abril","c":["form"],"x":"Encontro presencial que abriu o acompanhamento: seleção das habilidades prioritárias do 2º bimestre, templates de Língua Portuguesa e Matemática e produção de textos em situações reais de uso, com a pasta sanfonada.","nota":1},
+{"id":"arte-indigena","d":"2025-04-16","t":"Arte dos povos indígenas","c":["arte","proj"],"x":"Depois de aulas sobre a cultura dos povos indígenas, as turmas do 6º e do 7º ano produziram painéis com elementos usados nos adereços e nas pinturas corporais. A arte seguiu ganhando novos elementos nas semanas seguintes.","w":"<strong>Lídia de Camargo</strong> · 6º e 7º anos","p":["20250416-0004","20250416-0021","20250416-0019","20250416-0027","20250416-0003"]},
+{"id":"tiradentes-2025","d":"2025-04-23","t":"Abril: Tiradentes e Páscoa","c":["proj","fest"],"x":"Atividade de História sobre Tiradentes: infância, vida profissional, participação na Inconfidência Mineira e o significado da bandeira de Minas Gerais. Na Páscoa, a equipe recebeu um presente do grupo Roncador.","w":"<strong>Ana Maria Pereira</strong>","p":["20250423-0014","20250423-0015","20250423-0016","20250422-0017"]},
+{"id":"rifa-solidaria","d":"2025-05-16","t":"Rifa solidária","c":["com"],"x":"A equipe vendeu rifas para ajudar uma família da comunidade. A ideia e a arrecadação dos prêmios foram do professor Guilherme.","w":"Ideia de <strong>Guilherme Barbosa</strong>, com toda a equipe","nota":1},
+{"id":"maio-trabalho-maes","d":"2025-05-19","t":"Dia do Trabalho e Dia das Mães","c":["proj","fest"],"x":"Cartazes sobre o 1º de maio contaram a história de familiares que trabalham na região, como um pai que trabalha em uma mina de calcário. As crianças também montaram no chão da sala uma grande mensagem de Feliz Dia das Mães.","p":["20250519-0117","20250519-0125","20250519-0126","20250519-0128","20250519-0116"]},
+{"id":"formacao-maio-2025","d":"2025-05-19","t":"Encontro de formação FLUPP: Matemática","c":["form"],"x":"Encontro presencial com a equipe, com foco no ensino de Matemática e na escolha das habilidades prioritárias do bimestre. A equipe também compartilhou o modelo de planejamento quinzenal usado pela escola.","w":"Formadores <strong>Vanuse Ribeiro</strong> e <strong>Leonardo Dantas</strong>","p":["20250519-0150","20250519-0151","20250519-0154"]},
+{"id":"rochas","d":"2025-05-20","t":"1ª Exposição de Rochas e Minerais","c":["proj","amb"],"x":"Os estudantes do 4º e do 5º ano catalogaram rochas e minerais e apresentaram cada peça à comunidade, em mesas montadas ao ar livre. O evento contou com falas de convidados e virou notícia no portal Notícias Interativa.","w":"Catalogação com o professor <strong>Guilherme Barbosa</strong> · falas de <strong>Carlos Magno</strong> (diretor do Grupo Cavasa) e do gerente operacional <strong>Júnior</strong>","l":[["Notícia: alunos realizam a 1ª exposição de rochas e minerais","https://noticiasinterativa.com.br/noticias/cidades/31546-alunos-realizam-a-1-exposicao-de-rochas-e-minerais-na-escola-dona-rosa-penido"]],"p":["20250520-0074","20250506-0056","20250516-0028","20250520-0067","20250520-0046","20250520-0049","20250520-0052","20250520-0041","20250520-0085","20250520-0035"],"v":[["20250520-0061","Estudantes apresentam as rochas catalogadas"]]},
+{"id":"horta","d":"2025-06-05","t":"Horta escolar no lanche","c":["amb","proj"],"x":"Nas aulas de Agroecologia e Saberes do Campo, as turmas cultivaram hortaliças como pepino, rabanete e cebolinha. A produção passou a complementar o lanche dos estudantes.","w":"<strong>Ana Maria Pereira</strong> e <strong>Rosângela Ferreira Dias</strong> · 6º/7º anos e Ensino Médio","p":["20250605-0013","20250605-0011","20250605-0006","20250605-0019","20250605-0020","20250605-0009"]},
+{"id":"meio-ambiente-2025","d":"2025-06-11","t":"Dia do Meio Ambiente: coleta seletiva","c":["amb","proj"],"x":"Um dia de apresentações ao ar livre sobre coleta seletiva e reaproveitamento. Os estudantes explicaram as cores das lixeiras, mostraram painéis e trabalhos com material reciclado e conversaram com os convidados.","p":["20250611-0032","20250611-0042","20250611-0024","20250611-0019","20250611-0064","20250611-0073","20250611-0081","20250611-0074"],"v":[["20250611-0095","Apresentações dos estudantes"]]},
+{"id":"form-jun-2025","d":"2025-06-16","t":"Encontro de formação de junho","c":["form"],"x":"Análise e validação do portfólio da escola, com os vídeos, fotos e textos das ações do semestre.","nota":1},
+{"id":"horta-insumos","d":"2025-06-23","t":"Coleta de insumos para adubar os canteiros","c":["amb"],"x":"As turmas saíram a campo para recolher esterco e preparar o adubo dos canteiros da horta. Como resumiu a professora Ana Maria, sair da sala é a melhor aula.","w":"<strong>Ana Maria Pereira</strong> e <strong>Rosângela Ferreira Dias</strong> · 6º/7º anos e Ensino Médio","p":["20250623-0031","20250623-0033","20250623-0040","20250623-0043"]},
+{"id":"bullying-2025","d":"2025-06-25","t":"Bullying não é brincadeira","c":["cid"],"x":"Ação dos alunos do Ensino Médio para conscientizar a escola sobre as práticas de bullying dentro e fora do espaço escolar, com foco em respeitar e acolher o próximo.","w":"Estudantes do Ensino Médio","p":["20250625-0000","20250625-0004","20250625-0010","20250625-0012"]},
+{"id":"grafite","d":"2025-06-25","t":"Arte na escola: grafite, Van Gogh e cultura xavante","c":["arte"],"x":"O grafite era objeto de conhecimento em algumas turmas e foi ampliado para as demais. Com o apoio de Marcos Vinícius, do 9º ano, apaixonado por grafite, os colegas acompanharam em tempo real como essa arte é produzida. O resultado é um mural na própria escola. Nas mesmas semanas, o 8º e o 9º ano recriaram uma obra de Vincent van Gogh com a professora Rosângela, e o professor Guilherme compartilhou no grupo a foto de uma borduna xavante para o trabalho com a cultura indígena.","w":"Estudante <strong>Marcos Vinícius</strong> (9º ano), com a professora <strong>Lídia de Camargo</strong> · <strong>Rosângela Ferreira Dias</strong> · <strong>Guilherme Barbosa</strong>","p":["20250625-0017","20250625-0022","20250625-0019","20250625-0024","20250624-0011","20250625-0042"],"v":[["20250625-0016","Marcos Vinícius e o mural"]]},
+{"id":"pasta-sanfonada-2025","d":"2025-06-27","t":"Pasta sanfonada: de 2025 a 2026","c":["leit","proj"],"x":"Cada estudante tem uma pasta sanfonada onde ficam os textos, as interpretações e as histórias que escreve. É por ela que a professora acompanha a evolução de cada um. Em outubro de 2026, a mesma turma mostrou a pasta de atividades do novo ano: um registro contínuo de evidências de aprendizagem.","w":"<strong>Naureni de J. Costa</strong> · 1º, 2º e 3º anos","v":[["20250627-0018","A pasta em 2025"],["20261009-0017","A pasta em 2026"]],"p":["20250627-0017v1","20250627-0018v1","20261009-0017v1","20261009-0017v2"]},
+{"id":"jogar-brincar","d":"2025-06-30","t":"Projeto Jogar, Brincar e Aprender","c":["proj","fest"],"x":"Dois dias de jogos e brincadeiras em três espaços ao mesmo tempo: corrida do saco, cabo de guerra, dança das cadeiras, estátua, queimada, corrida com balão, pular corda e cantigas na quadra de cimento; vôlei na quadra de areia; futebol no campo gramado, com times que juntaram turmas da Educação Infantil ao Ensino Médio.","w":"Coordenação <strong>Ednésio</strong> · professores <strong>Ana Maria</strong>, <strong>Guilherme</strong>, <strong>Laiza</strong>, <strong>Lídia</strong>, <strong>Naureni</strong> e <strong>Rosângela</strong> · apoio <strong>Bruno</strong> e <strong>Wilkner</strong>","p":["20250701-0019","20250701-0021","20250701-0023","20250701-0024","20250701-0016","20250701-0010"],"v":[["20250701-0037","Brincadeiras na quadra"]]},
+{"id":"junina-2025","d":"2025-07-02","t":"Festa Junina","c":["fest"],"x":"Apresentação junina das turmas da Educação Infantil ao 5º ano, com caipiras, chapéus de palha e mesa de comidas típicas.","w":"<strong>Laiza Rodrigues</strong>, <strong>Naureni de J. Costa</strong> e equipe","p":["20250702-0043","20250702-0024","20250702-0059","20250702-0060","20250702-0049","20250702-0032"],"v":[["20250702-0064","Apresentação junina"]]},
+{"id":"pintura","d":"2025-07-03","t":"Mutirão de pintura da escola","c":["com"],"x":"Nas férias de julho, a própria equipe pintou salas e corredores para receber as crianças no segundo semestre. Teve direito a churrasco no almoço.","w":"Equipe Rosa Penido","p":["20250703-0036","20250703-0047","20250703-0055","20250703-0056","20250704-0016","20250703-0058"]},
+{"id":"site-portfolio","d":"2025-07-06","t":"No ar: site e portfólio da escola","c":["com","form"],"x":"A prévia do site da escola entrou no ar, com seção de relatos de experiência, e o portfólio digital foi atualizado com fotos, vídeos e textos das ações do semestre.","w":"<strong>Leonardo Dantas</strong>","l":[["escolarosapenido.site","https://www.escolarosapenido.site"],["Portfólio no Sway","https://sway.cloud.microsoft/tfce9C4KazkiwSWG?ref=Link"]],"nota":1},
+{"id":"retorno-2025","d":"2025-08-04","t":"Volta às aulas do segundo semestre","c":["fest","com"],"x":"Arco de balões, portas decoradas por turma e um café de boas-vindas. Mesmo com poucos alunos por causa da falta de dois transportes, todas as turmas voltaram.","p":["20250804-0002","20250804-0006","20250804-0004","20250804-0011","20250804-0014"]},
+{"id":"formacao-agosto-2025","d":"2025-08-12","t":"Formação de agosto e escolha das obras literárias","c":["form","leit"],"x":"Dois dias de formação na escola, com foco na leitura literária. Na sequência, a professora Lídia levou ao grupo uma reflexão sobre como a leitura e a interpretação do enunciado interferem na resolução de problemas de Matemática no 6º ano. Uma oficina de dobraduras e modelos em papel abriu novas possibilidades para a sala. Para o trabalho com as obras, Lídia escolheu Breve história de um pequeno amor, de Marina Colasanti, para o 6º e o 7º ano, e Naureni, um livro da biblioteca da escola para o 1º ao 3º ano; as demais escolhas seguiram em definição.","w":"<strong>Vanuse Ribeiro</strong>, <strong>Leonardo Dantas</strong> e <strong>Lídia de Camargo</strong> · <strong>Naureni de J. Costa</strong>","p":["20250826-0045","20250826-0043","20250828-0009"]},
+{"id":"guilherme","d":"2025-08-15","t":"Até breve, professor Guilherme","c":["form","com"],"x":"Guilherme Barbosa se despediu da escola depois de ser aprovado em primeiro lugar em uma seleção para professores em Nova Nazaré, que tinha a elaboração de um plano de aula como última etapa. Ele atribuiu a conquista às formações e à acolhida da equipe.","q":["Hoje, acredito que vou fazer parte da história de vida dos meus alunos.","Guilherme Barbosa"],"nota":1},
+{"id":"horta-colheita","d":"2025-09-09","t":"Colheita de alface","c":["amb"],"x":"Alunos da Educação Infantil, do 3º e do 5º ano colheram alface na horta escolar, sem nenhum veneno. Em agosto, o lanche já tinha ganhado alface da horta de Cleonice, agente de saúde.","p":["20250909-0002","20250909-0003","20250909-0006","20250825-0009"]},
+{"id":"form-set-2025","d":"2025-09-10","t":"Encontro de formação de setembro","c":["form"],"x":"Preparação do VI Chá Literário. Na semana seguinte, a FLUPP compartilhou um modelo de avaliação de fluência leitora do 2º ano para servir de exemplo aos testes da escola.","nota":1},
+{"id":"cha-vi","d":"2025-09-25","t":"VI Chá Literário","c":["leit","arte","fest"],"x":"A noite em que as turmas apresentaram para a comunidade o que leram no ano, em ordem da Educação Infantil ao Ensino Médio. A Escola Gruta Azul também participou. O evento teve premiação literária, falas de convidados, professores e estudantes, e a música dos alunos que aprenderam a tocar com o apoio da Mineradora Cavasa. O encerramento estava previsto com a música Era uma vez, de Sandy, apresentada pelas alunas Bianca e Sabriny.","w":"Idealização: <strong>Ana Maria Pereira</strong> · vídeos editados por <strong>Leonardo Dantas</strong>","li":[["Educação Infantil · Laiza","música Pega essa peneira (Marcelo Serralva)"],["Educação Infantil · Simone","música Cinco patinhos"],["1º ao 3º ano · Naureni","Escadinha da leitura, música com teatro, de autoria da professora"],["1º ao 5º ano · Simone","Branca de Neve (Irmãos Grimm)"],["4º e 5º ano · Edimar","música Aquarela (Toquinho)"],["6º e 7º ano · Lídia","adaptação teatral do filme O Garoto (Charlie Chaplin)"],["8º e 9º ano · Rosângela","Noite Estrelada, Mona Lisa, arte e meio ambiente (Van Gogh, Portinari, Da Vinci)"],["Ensino Médio · Ana Maria","O milagre da gaita, de O Auto da Compadecida (Ariano Suassuna)"]],"l":[["Notícia: escolas promovem Chá Literário","https://noticiasinterativa.com.br/noticias/educacao/32721-escolas-promovem-cha-literario-veja-video"]],"p":["20250925-0046","20250924-0031","20250924-0035","20250924-0044","20250924-0056","20250925-0048","20250925-0040","20250925-0042","20250925-0050","20250925-0029"],"v":[["20250927-0022","Os músicos da escola"],["20251006-0050","Falas dos convidados (recorte editado)"]]},
+{"id":"semana-crianca-2025","d":"2025-10-10","t":"Semana da Criança","c":["fest"],"x":"Dia de fantasia, cabelo maluco e painel de asas de borboleta, com algodão-doce e cachorro-quente. Os maiores vieram de caubói.","p":["20251010-0017","20251010-0025","20251010-0032","20251010-0037","20251010-0062","20251010-0079","20251010-0092","20251010-0098","20251011-0007"],"v":[["20251010-0058","Semana da Criança"]]},
+{"id":"dia-professor-2025","d":"2025-10-15","t":"Dia dos Professores","c":["fest"],"x":"Homenagens da FLUPP e da vice-prefeita Eliane Barros aos professores da escola, incluindo os da extensão Calcário.","q":["Há algo de mágico em quem ensina: uma entrega silenciosa, uma paciência que acolhe, uma esperança que insiste.","Fundação Lucia e Pelerson Penido"],"p":["20251015-0016"],"nota":1},
+{"id":"agua-viva-criancas-2025","d":"2025-10-17","t":"Dia das Crianças na Fazenda Água Viva","c":["fest","com"],"x":"Passeio das turmas à Fazenda Água Viva no Dia das Crianças, com brinquedos infláveis, piscina de bolinhas, cama elástica, mesa farta e brincadeiras ao ar livre.","w":"Parceria <strong>Fazenda Água Viva</strong>","p":["20251017-0064","20251017-0060","20251017-0062","20251017-0073","20251017-0050","20251017-0039"],"v":[["20251017-0079","Brincadeiras no gramado"]]},
+{"id":"form-out-2025","d":"2025-10-29","t":"Encontro de formação de outubro","c":["form"],"x":"Propostas de ações a partir das leituras literárias de cada turma, reunidas em um documento compartilhado no dia seguinte.","nota":1},
+{"id":"form-nov-2025","d":"2025-11-26","t":"Encontro de formação de novembro","c":["form"],"x":"Dois dias de formação na escola. A FLUPP também apresentou o Programa Escola das Adolescências.","nota":1},
+{"id":"energias","d":"2025-12-01","t":"Energias renováveis","c":["proj"],"x":"Trabalho feito e apresentado pelo Ensino Médio, com maquetes e circuitos sobre tipos de energia renovável.","w":"<strong>Rosângela Ferreira Dias</strong> · Ensino Médio","p":["20251201-0006","20251201-0005","20251201-0007","20251201-0011"]},
+{"id":"formatura-2025","d":"2025-12-04","t":"Formatura 2025","c":["fest","com"],"x":"A escola organizou a formatura com uma rifa de bicicleta para custear a festa, vendida por estudantes e equipe. A cerimônia aconteceu em 04/12/2025.","w":"Organização <strong>Ana Maria Pereira</strong>, formandos e equipe","p":["20251121-0009","20251124-0012","20251124-0013","20250922-0021"]},
+{"id":"natal-2025","d":"2025-12-24","t":"Natal e a carta dos formadores","c":["fest","form"],"x":"Presépio na escola, cartão de Natal da FLUPP e uma carta dos formadores para cada membro da equipe: Ednésio, Ana Maria, Lídia, Laiza, Naureni, Edimar e Rosângela.","q":["Foi um presente conhecer vocês.","Vanuse Ribeiro e Leonardo Dantas"],"p":["20251219-0054","20251224-0003"],"nota":1},
+{"id":"semana-pedagogica","d":"2026-01-20","t":"Formação pedagógica da Seduc-MT em Cuiabá","c":["form"],"x":"Formação estadual com oficinas, espaço organizado em colmeias, Tertúlia Literária e a cerimônia de posse dos servidores aprovados no concurso da Seduc-MT. Encontro com antigos colegas, como a professora Edna, da Escola Lúcia Penido, e com Silvia, chefe da DRE Barra do Garças.","w":"<strong>Ana Maria Pereira</strong> e coordenação","q":["A arte existe porque a vida não basta.","Ferreira Gullar, citado por Ana Maria"],"p":["20260120-0088","20260120-0061","20260120-0056","20260120-0083","20260120-0068"]},
+{"id":"inicio-2026","d":"2026-02-02","t":"Início do ano com as mãos na terra","c":["amb","com"],"x":"O ano começou com as turmas cuidando da área verde, da horta e do viveiro, plantando e cuidando das mudas.","w":"<strong>Rosângela Ferreira Dias</strong>","p":["20260202-0006","20260202-0010","20260309-0002","20260309-0005","20260309-0004"]},
+{"id":"indea","d":"2026-03-05","t":"Palestra do INDEA","c":["amb","cid"],"x":"Palestra do Instituto de Defesa Agropecuária sobre saúde animal e vegetal, para os alunos a partir do 4º ano.","p":["20260305-0016","20260305-0019","20260305-0009","20260305-0021"]},
+{"id":"armarios","d":"2026-03-19","t":"Armários novos na cozinha","c":["com"],"x":"Os armários foram comprados com o dinheiro de um evento realizado pela própria equipe, e montados por ela.","w":"Equipe Rosa Penido","p":["20260319-0005","20260319-0007","20260319-0002"]},
+{"id":"dia-agua-2026","d":"2026-03-23","t":"Dia Mundial da Água","c":["amb","cid"],"x":"O Ensino Médio orientou a escola sobre o consumo consciente da água e produziu um vídeo sobre o tema.","w":"Ensino Médio · <strong>Ana Maria Pereira</strong>","p":["20260323-0012","20260323-0015","20260323-0010","20260323-0017"],"v":[["20260324-0051","Vídeo feito pelos alunos do Ensino Médio"]]},
+{"id":"jogos-populares","d":"2026-03-27","t":"Jogos populares brasileiros","c":["proj","fest"],"x":"Aula de Educação Física com o Ensino Médio dedicada a jogos populares, como a guerra de balões.","w":"<strong>Jeinneffer Carvalho</strong> · Ensino Médio","p":["20260327-0001","20260327-0003","20260327-0005"],"v":[["20260327-0032","Guerra de balões"]]},
+{"id":"form-mar-2026","d":"2026-03-31","t":"Encontro de formação de março","c":["form"],"x":"Dois dias de formação na escola, depois das avaliações diagnósticas do início do ano.","nota":1},
+{"id":"conselho-tutelar","d":"2026-04-09","t":"Palestra do Conselho Tutelar","c":["cid"],"x":"O Conselho Tutelar conversou com os estudantes sobre direitos e proteção de crianças e adolescentes.","p":["20260409-0007","20260409-0009","20260409-0008"]},
+{"id":"tiradentes-2026","d":"2026-04-16","t":"Por que 21 de abril é feriado?","c":["proj"],"x":"Os estudantes investigaram a história de Tiradentes e o motivo do feriado.","w":"<strong>Jeinneffer Carvalho</strong>","p":["20260416-0005"],"nota":1},
+{"id":"cantinho","d":"2026-04-24","t":"Cantinho da Leitura","c":["leit"],"x":"O Cantinho da Leitura foi organizado com carinho e inaugurado pelos próprios alunos. Desde então, cada professor tem 30 minutos com a turma para leitura literária, conforme o cronograma. Para os menores, contação de história pela professora e pela auxiliar de sala e leitura de imagens.","w":"Organização <strong>Ana Maria Pereira</strong> · inauguração registrada por <strong>Jeinneffer Carvalho</strong>","p":["20260424-0013","20260415-0027","20260423-0011","20260424-0016","20260424-0021","20260424-0023","20260424-0024"]},
+{"id":"maes-2026","d":"2026-05-15","t":"Festa das Mães","c":["fest"],"x":"Café da manhã, apresentações das turmas, bingo com prêmios para as mães e um painel de flores. Fim de festa com trabalho e descontração.","p":["20260515-0023","20260515-0030","20260515-0031","20260515-0028","20260515-0026","20260515-0021"],"v":[["20260516-0003","Apresentações para as mães"]]},
+{"id":"meio-ambiente-2026","d":"2026-06-12","t":"Semana do Meio Ambiente: O caminho da água","c":["amb","proj"],"x":"O maior projeto do semestre. Começou com a palestra de Júnior, da Fazenda Água Viva, e com trabalhos do 8º e do 9º ano. Os anos iniciais produziram papel semente e uma maquete sobre o caminho da água, com pneus pintados. Os alunos entregaram na vila folders sobre coleta seletiva. A culminância foi na Fazenda Água Viva, com apresentações da Educação Infantil (De onde vem a água), do 1º ao 5º ano (fossas sustentáveis e fossa de bananeira, explicada pelo aluno Rafael) e do 6º ano ao Ensino Médio (sustentabilidade, coleta seletiva, fossas e compostagem).","w":"Toda a equipe · parceria <strong>Fazenda Água Viva</strong> e <strong>Mineração Cavasa</strong>","p":["20260612-0028","20260528-0004","20260529-0006","20260603-0034","20260608-0037","20260608-0045","20260609-0009","20260610-0041","20260610-0033","20260610-0050","20260611-0047","20260611-0053","20260611-0062","20260611-0069","20260612-0017","20260612-0027","20260612-0024","20260612-0020","20260612-0036","20260611-0153","20260615-0000"],"v":[["20260608-0041","Produção do papel semente"],["20260610-0077","Ensaio das meninas sobre o papel semente"],["20260612-0065","Apresentação na Fazenda Água Viva"]]},
+{"id":"bicicleta-flupp","d":"2026-06-12","t":"A FLUPP doa a bicicleta da rifa","c":["com"],"x":"A Fundação Lucia e Pelerson Penido doou a bicicleta da rifa da formatura 2026.","p":["20260612-0048"],"nota":1},
+{"id":"conferencia","d":"2026-06-16","t":"5ª Conferência dos Direitos da Criança e do Adolescente","c":["cid"],"x":"Alunos da Escola Dona Rosa Penido, das salas anexas Getúlio Vargas, participaram da conferência municipal em Cocalinho. O estudante Pedro foi convidado a explicar ao público o conceito de medida socioeducativa, e estudantes se candidataram a delegados para representar as escolas do município na conferência estadual em Cuiabá.","p":["20260616-0056","20260616-0057","20260616-0070"]},
+{"id":"cozinha","d":"2026-06-22","t":"Quem alimenta a escola","c":["com"],"x":"Pães feitos pela Karolliny para o lanche, almoços preparados pela Junielly e mesas fartas de quem cuida da cozinha todos os dias.","w":"<strong>Karolliny Dias</strong>, <strong>Junielly</strong> e <strong>Andreia</strong>","p":["20260615-0026","20260622-0015","20260622-0033","20260623-0014"]},
+{"id":"junina-2026","d":"2026-06-30","t":"Festa Junina com a fanfarra","c":["fest","arte"],"x":"Um dia de aprender com entretenimento na Escola Dona Rosa Penido, Calcário Roncador, com a fanfarra municipal, apresentações de dança, muita comida boa e muita gente bonita.","w":"Equipe Rosa Penido · <strong>fanfarra municipal</strong>","p":["20260630-0075","20260617-0048","20260630-0061","20260630-0068","20260630-0069","20260630-0042","20260630-0036","20260624-0105"],"v":[["20260630-0076","A fanfarra municipal na escola"]]},
+{"id":"balanco-2026","d":"2026-07-02","t":"Balanço do primeiro semestre","c":["form"],"x":"Mensagem da FLUPP à equipe: o plano de ação do segundo semestre fortalece a alfabetização, a leitura, a escrita e a resolução de problemas, com reescritas quinzenais, duplas produtivas, apoios diferenciados e registro de evidências.","nota":1},
+{"id":"volta-2026","d":"2026-08-04","t":"Volta às aulas e uniforme novo","c":["fest","com"],"x":"Boas-vindas ao segundo semestre e entrega do uniforme do Município. Pedro começou o levantamento dos gêneros literários trabalhados por turma no primeiro semestre.","p":["20260806-0056","20260806-0012","20260804-0019","20260804-0024"],"v":[["20260804-0030","Bem-vindos à volta às aulas"]]},
+{"id":"ideb","d":"2026-08-05","t":"Resultado do Ideb 2025","c":["form"],"x":"O resultado do Ideb 2025 foi divulgado e acompanhado pela equipe. Em agosto, a FLUPP escreveu à escola parabenizando os resultados e propondo o compartilhamento dos planos de aula, com foco em leitura, escrita, revisão e reescrita em todas as áreas.","l":[["Notícia: Ideb regional","https://noticiasinterativa.com.br/noticias/educacao/35881-agua-boa-e-nova-nazare-sao-destaques-no-ideb-regional"]],"q":["A história da Rosa Penido é construída por vocês.","Equipe FLUPP, agosto de 2026"],"nota":1},
+{"id":"pais-estudante","d":"2026-08-07","t":"Dia dos Pais e Dia do Estudante","c":["fest"],"x":"Lembranças preparadas com carinho para os pais e uma homenagem no Dia do Estudante.","w":"<strong>Naureni de J. Costa</strong> e <strong>Laiza Rodrigues</strong>","p":["20260807-0023v2","20260811-0020"],"v":[["20260807-0023","Preparando tudo para os papais"]],"nota":1},
+{"id":"formacao-2026","d":"2026-09-01","t":"Formação pedagógica FLUPP 2026","c":["form"],"x":"Encontros de formação na escola sobre os eixos de Língua Portuguesa (leitura e escuta, escrita, oralidade e análise linguística e semiótica) e de Matemática (números, álgebra, geometria, probabilidade e estatística, grandezas e medidas).","w":"<strong>Vanuse Ribeiro</strong>, <strong>Leonardo Dantas</strong> e <strong>Abadia Cunha</strong>","p":["20260901-0077","20260901-0079","20260901-0080","20260901-0081"]},
+{"id":"banda","d":"2026-09-03","t":"Entrega oficial dos instrumentos da banda","c":["arte","com"],"x":"A escola recebeu oficialmente os instrumentos da banda. O ensino de música, que já tinha brilhado no VI Chá Literário, conta com o apoio da Mineradora Cavasa.","w":"Apoio <strong>Mineração Cavasa</strong> · registro de <strong>Pedro</strong>","v":[["20260903-0111","Entrega dos instrumentos"]],"p":["20260903-0111v1","20260903-0112v1","20260903-0114v1","20260903-0111v2"]},
+{"id":"cultura-brasileira","d":"2026-09-04","t":"Cultura brasileira no pátio","c":["arte","leit"],"x":"Amarelinha, brincadeiras de roda e leitura no Cantinho: atividades sobre a cultura brasileira para o 1º, 2º e 3º ano.","w":"<strong>Naureni de J. Costa</strong> · 1º, 2º e 3º anos","p":["20260904-0115","20260904-0117","20260904-0085","20260904-0089"],"v":[["20260904-0109","Brincadeiras de roda"]]},
+{"id":"bafo","d":"2026-09-09","t":"Bafo da leitura","c":["leit"],"x":"Para as crianças que gostam de brincar de bafo, um bafo com palavras e leitura.","w":"<strong>Naureni de J. Costa</strong>","p":["20260909-0076","20260909-0081","20260909-0082v1"],"v":[["20260909-0082","O bafo da leitura em sala"]]},
+{"id":"setembro-amarelo","d":"2026-09-10","t":"Setembro Amarelo: palavras que iluminam","c":["cid"],"x":"Roda de conversa, escrita, leitura, desenho e contação de história. Cada estudante deixou no painel uma mensagem de carinho, esperança e valorização da vida.","w":"<strong>Naureni de J. Costa</strong>","p":["20260910-0050","20260910-0053","20260910-0051"],"v":[["20260910-0070","Roda de conversa"]]},
+{"id":"ciencia","d":"2026-09-11","t":"Ciência na prática e rotina de leitura","c":["proj","leit"],"x":"Na aula de Ciências, os alunos misturaram leite e vinagre e conversaram sobre alimentação saudável e o cuidado com certas misturas. Na mesma semana, a turma multisseriada mostrou a rotina de leitura em voz alta no quadro.","w":"<strong>Edimar Costa dos Santos</strong> e <strong>Naureni de J. Costa</strong>","p":["20260911-0007","20260911-0059v1","20260911-0059v2","20260911-0061v1"],"v":[["20260911-0059","Experimento com leite e vinagre"],["20260911-0061","Nossa rotina com a leitura"]]},
+{"id":"cha-vii-prep","d":"2026-09-16","t":"VII Chá Literário · A preparação","c":["leit","arte","proj"],"cha":1,"x":"Os preparativos começaram em julho. Em agosto, Pedro reuniu, turma por turma, os gêneros literários trabalhados no primeiro semestre e o tema de cada apresentação. Em sala, vieram as pinturas das obras de arte do 8º e 9º ano, uma aula sobre o chá literário, a sanfona de papel, os ensaios com violão e percussão, os potes e garrafas decorados pela turma multisseriada, as comidas típicas da região e as ervas medicinais que cada aluno trouxe de casa.","w":"Levantamento das turmas: <strong>Pedro</strong> · professores <strong>Laiza</strong>, <strong>Naureni</strong>, <strong>Edimar</strong>, <strong>Jeinneffer</strong>, <strong>Rosângela</strong> e <strong>Ana Maria</strong>","p":["20260825-0007","20260825-0008","20260701-0004","20260826-0021","20260916-0066","20260916-0067","20260916-0068","20260916-0070","20260918-0016","20260918-0017","20260918-0018","20260918-0020","20260921-0037","20260921-0039","20260921-0041","20260923-0012","20260923-0021","20260923-0029","20260923-0082","20260923-0081"],"v":[["20260913-0065","Vídeo de preparação compartilhado por Ana Maria"],["20260923-0031","Ensaio de percussão"]]},
+{"id":"cha-vii-bastidores","d":"2026-09-23","t":"VII Chá Literário · Bastidores e cozinha","c":["com","fest"],"cha":1,"x":"Nos dois últimos dias, a equipe montou o cenário no pátio: corredor de entrada com letras coloridas no chão, personagens em tamanho real, portal de livro, palco com cortina e o painel de boas-vindas com o bule do chá. Na cozinha, biscoitos, roscas e pães foram preparados e assados para a noite, com copos e camisetas personalizados.","w":"Equipe Rosa Penido","p":["20260924-0062","20260924-0058","20260924-0059","20260924-0061","20260924-0064","20260924-0065","20260924-0067","20260924-0066","20260924-0070","20260924-0075","20260924-0076","20260923-0093","20260923-0084","20260912-0084","20260925-0026","20260925-0030"],"v":[["20260925-0101","O corredor de entrada"]]},
+{"id":"cha-vii","d":"2026-09-24","t":"VII Chá Literário · A noite","c":["leit","arte","fest"],"cha":1,"x":"Às 19h, no pátio da escola, as turmas apresentaram à comunidade o que leram no ano. A noite terminou com uma cena de encerramento e com vídeos gravados por Pedro com estudantes, professores e convidados.","w":"Organização <strong>Ana Maria Pereira</strong> e equipe · registro em vídeo <strong>Pedro</strong>","li":[["6º e 7º ano · Jeinneffer","contação de A Lagartinha Comilona (Eric Carle)"],["Educação Infantil · Laiza","A vida da Borboleta, em projeto conjunto com o 6º e 7º ano"],["1º, 2º e 3º ano · Naureni","Folclore brasileiro: contos populares, parlendas, adivinhas e cantigas"],["4º e 5º ano · Edimar","poesia e música Meu Abrigo (Gabriela e Rodrigo Melim)"],["8º e 9º ano · Rosângela","Girassóis, Flor de Cerejeira, A Poltrona Vermelha e Amendoeira em Flor (Van Gogh, Picasso, Olga Darchuk)"],["Ensino Médio · Ana Maria","teatro a partir de O Auto da Compadecida (Ariano Suassuna)"]],"p":["20260924-0062","20260924-0115","20260924-0113","20260924-0096","20260924-0097","20260924-0099","20260924-0100","20260924-0103","20260924-0106","20260924-0109","20260924-0110","20260924-0112","20260924-0098","20260924-0120","20260924-0119","20260924-0121","20260924-0122","20260924-0125","20260925-0033","20260925-0035","20260925-0036","20260925-0055","20260925-0057","20260925-0060"],"v":[["20260925-0090","A noite em um minuto"],["20260925-0098","As borboletas da Educação Infantil"],["20260925-0100","Apresentação no palco"],["20260925-0112","Leitura ao microfone"],["20260925-0102","Música ao vivo"],["20260924-0123","Cena de encerramento"]]},
+{"id":"cha-vii-vozes","d":"2026-09-24","t":"VII Chá Literário · Vozes da noite","c":["leit","com"],"cha":1,"x":"Ao fim da noite, Pedro gravou conversas com estudantes, professores e convidados. A equipe e os convidados posaram no painel de boas-vindas.","w":"Vídeos gravados por <strong>Pedro</strong>","p":["20260925-0028","20260925-0029","20260925-0034","20260925-0042","20260925-0046"],"v":[["20260925-0110","Fala de convidado"],["20260925-0120","Conversa gravada na noite 1"],["20260925-0123","Conversa gravada na noite 2"],["20260925-0129","Conversa gravada na noite 3"],["20260925-0119","Conversa gravada na noite 4"]]},
+{"id":"dia-feliz","d":"2026-10-08","t":"Projeto Dia Feliz: Dia das Crianças","c":["fest","com"],"x":"Projeto de Dia das Crianças planejado pela escola em parceria com a Fazenda Água Viva e a Mineração Cavasa, para os alunos e as crianças da Vila Roncador. O projeto previa gincana de brincadeiras antigas entre as equipes Azul e Vermelha, brinquedos e lanche. Na semana, a turma multisseriada também viveu a Semana Criança Feliz.","w":"Parceria <strong>Fazenda Água Viva</strong> e <strong>Mineração Cavasa</strong>","p":["20261005-0023","20261009-0019","20261009-0020"],"v":[]},
+{"id":"gincana","d":"2026-10-14","t":"Celebração do VII Chá e encerramento da gincana","c":["fest"],"x":"Lanche diferente em comemoração ao sucesso do VII Chá Literário e encerramento da gincana para a premiação.","p":["20261014-0025","20261014-0013","20261014-0022","20261014-0020"],"v":[["20261014-0024","Gincana no pátio"]]},
+{"id":"dia-professor-2026","d":"2026-10-15","t":"Dia dos Professores","c":["fest"],"x":"Almoço oferecido pela Junielly, pela Andreia e pelo Pedro, homenagens da FLUPP e de Abadia Cunha, e uma carta de Vanuse Ribeiro para a equipe.","q":["Ensinar é um exercício de imortalidade.","Rubem Alves, citado por Vanuse Ribeiro"],"p":["20261015-0025","20261016-0007","20261015-0023"]},
+{"id":"bullying-2026","d":"2026-10-29","t":"Palestra sobre bullying","c":["cid"],"x":"A escola recebeu o Conselho Tutelar, uma psicóloga e a Polícia Militar para uma palestra sobre bullying com os estudantes.","w":"Registro de <strong>Pedro</strong>","p":["20261029-0033","20261029-0028","20261029-0026"],"v":[["20261029-0041","Palestra com os estudantes"]]}
+];
+
+const PROJECTS = [
+["Especial VII Chá Literário","A noite de 24/09/2026 em detalhe: preparação, bastidores, as apresentações e as vozes da noite.","especial-cha","20260924-0062"],
+["Chá Literário 2025","O VI Chá, com oito apresentações, premiação literária e os músicos da escola.","cha-vi","20250925-0046"],
+["Meio ambiente","Coleta seletiva em 2025; O caminho da água em 2026, com culminância na Fazenda Água Viva.","meio-ambiente-2026","20260612-0024"],
+["Horta escolar","Agroecologia e Saberes do Campo: do adubo ao lanche das crianças.","horta","20250605-0013"],
+["Rochas e Minerais","A 1ª exposição, organizada pelo 4º e 5º ano, com falas do Grupo Cavasa.","rochas","20250520-0067"],
+["Jogar, Brincar e Aprender","Dois dias de jogos, da Educação Infantil ao Ensino Médio.","jogar-brincar","20250701-0023"],
+["Cantinho da Leitura","Inaugurado pelos alunos em 2026, com 30 minutos de leitura literária por turma.","cantinho","20260424-0013"],
+["Arte na escola","Grafite de Marcos Vinícius, arte indígena, Van Gogh e a banda.","grafite","20250625-0022"],
+["Cidadania","Bullying, Conselho Tutelar, Setembro Amarelo e a Conferência dos Direitos.","conferencia","20260910-0050"],
+["Formação FLUPP","Encontros na escola, Semana Pedagógica e o acompanhamento dos planos.","formacao-2026","20260901-0079"],
+["Pasta sanfonada","O registro contínuo das produções de cada estudante, de 2025 a 2026.","pasta-sanfonada-2025","20250627-0017v1"]
+];
+
+const PEOPLE = [
+["Equipe da escola",[["Ednésio","Gestão e coordenação do projeto Jogar, Brincar e Aprender"],["Ana Maria Pereira","Professora do Ensino Médio e de Agroecologia; organização do Chá Literário"],["Lídia de Camargo","6º e 7º anos, Arte e Língua Portuguesa (2025)"],["Rosângela Ferreira Dias","8º e 9º anos, Arte, Agroecologia e Saberes do Campo"],["Edimar Costa dos Santos","4º e 5º anos, Ciências"],["Naureni de J. Costa","1º, 2º e 3º anos, classe multisseriada"],["Laiza Rodrigues","Educação Infantil"],["Simone","Educação Infantil e anos iniciais (VI Chá Literário)"],["Guilherme Barbosa","Professor em 2025; catalogação das rochas, rifa solidária"],["Jeinneffer Carvalho","6º e 7º anos e Educação Física (2026)"],["Mauriane Lemes","Equipe da escola (2026)"],["Karolliny Dias","Equipe (2026); pães do lanche"]]],
+["Apoio, cozinha e registro",[["Bruno e Wilkner","Apoio no Jogar, Brincar e Aprender"],["Junielly","Almoços da equipe"],["Andreia","Almoço do Dia dos Professores 2026"],["Pedro","Estudante; apoio ao registro e ao roteiro do VII Chá (2026)"],["Cleonice","Agente de saúde; alface da horta para o lanche"]]],
+["FLUPP",[["Vanuse Ribeiro","Formadora"],["Leonardo Dantas","Formador; portfólio, site e vídeos"],["Abadia Cunha","Equipe FLUPP (2026)"],["Silvia","Fundação Lucia e Pelerson Penido"],["Eduarda","Fundação Lucia e Pelerson Penido"],["Fundação Lucia e Pelerson Penido","Formação, apoio e doação da bicicleta da rifa 2026"]]],
+["Parceiros",[["Grupo Cavasa / Mineração Cavasa","Fala na Exposição de Rochas, ensino de música, Dia Feliz"],["Carlos Magno","Diretor do Grupo Cavasa"],["Júnior","Gerente operacional; fala na Exposição de Rochas (2025)"],["Júnior (Fazenda Água Viva)","Palestra do Dia do Meio Ambiente (2026)"],["Fazenda Água Viva","Dia das Crianças 2025, Meio Ambiente e Dia Feliz 2026"],["Escola Gruta Azul","Participou do VI Chá Literário"],["Grupo Roncador","Presente de Páscoa para a equipe"]]],
+["Poder público e rede",[["Prefeitura de Cocalinho","Uniforme escolar e fanfarra municipal"],["Eliane Barros","Vice-prefeita; homenagem aos professores"],["Seduc-MT","Semana Pedagógica 2026"],["Silvia (DRE Barra do Garças)","Chefe da DRE"],["Edna","Professora da Escola Lúcia Penido"],["INDEA, Conselho Tutelar e Polícia Militar","Palestras na escola"]]],
+["Estudantes nomeados",[["Marcos Vinícius","9º ano; grafite do mural da escola"],["Bianca e Sabriny","Encerramento previsto do VI Chá Literário"],["Rafael","Explicou a fossa de bananeira na Fazenda Água Viva"]]]
+];
+
+const VOICES = [
+["Vocês são um grupo potente demais.","Vanuse Ribeiro","antes das apresentações do Meio Ambiente, junho de 2025"],
+["Essas crianças se divertem. Ainda que seja pegando cocô de vaca, sair da sala é a melhor aula.","Ana Maria Pereira","coleta de insumos da horta, junho de 2025"],
+["Hoje, acredito que vou fazer parte da história de vida dos meus alunos.","Guilherme Barbosa","despedida, agosto de 2025"],
+["Aqui vamos colando as atividades como: textos, interpretação de textos e histórias feitas por eles, onde iremos acompanhar a evolução de cada um.","Naureni de J. Costa","sobre a pasta sanfonada, junho de 2025"],
+["[…] transformar planejamento em ação, ação em evidência e evidência em novas decisões pedagógicas.","Vanuse Ribeiro","fim do primeiro semestre, julho de 2026"],
+["Deixar um pouquinho de mim e levar um pouquinho de cada um comigo.","Mauriane Lemes","despedida, setembro de 2026"]
+];
+
+const PRESS = [
+["21/05/2025","Alunos realizam a 1ª Exposição de Rochas e Minerais na Escola Dona Rosa Penido · Notícias Interativa","https://noticiasinterativa.com.br/noticias/cidades/31546-alunos-realizam-a-1-exposicao-de-rochas-e-minerais-na-escola-dona-rosa-penido"],
+["06/07/2025","Site da escola: escolarosapenido.site","https://www.escolarosapenido.site"],
+["2025","Portfólio da escola no Sway","https://sway.cloud.microsoft/tfce9C4KazkiwSWG?ref=Link"],
+["24/09/2025","Escolas promovem Chá Literário · Notícias Interativa","https://noticiasinterativa.com.br/noticias/educacao/32721-escolas-promovem-cha-literario-veja-video"]
+];
+
+/* ---------- render ---------- */
+const MES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const fmt = d => { const [y,m,dd] = d.split("-"); return `${dd}/${m}/${y}`; };
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+E.sort((a,b) => a.d.localeCompare(b.d));
+
+const nPhotos = E.reduce((n,e) => n + (e.p||[]).length, 0);
+const nVids = E.reduce((n,e) => n + (e.v||[]).length, 0);
+const nPeople = PEOPLE.reduce((n,g) => n + g[1].length, 0);
+document.getElementById("facts").innerHTML = [
+  [E.length,"momentos registrados"],[nPhotos,"fotos nesta página"],[nVids,"vídeos"],[2,"Chás Literários"],[nPeople,"nomes e instituições citados"]
+].map(([n,l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
+
+const chips = document.getElementById("chips");
+const catCount = {}; E.forEach(e => e.c.forEach(c => catCount[c] = (catCount[c]||0) + 1));
+chips.innerHTML = `<i class="chip-ind" aria-hidden="true"></i><button class="chip" data-cat="all" aria-pressed="true">Tudo<i>${E.length}</i></button>` +
+  Object.entries(CATS).map(([k,v]) => `<button class="chip" data-cat="${k}" aria-pressed="false">${v}<i>${catCount[k]||0}</i></button>`).join("") +
+  `<span class="sep"></span><a class="jump" href="#y2025">2025</a><a class="jump" href="#y2026">2026</a><a class="jump" href="#pessoas">Pessoas</a>`;
+
+document.getElementById("projects").innerHTML = PROJECTS.map(([t,x,id,img]) =>
+  `<a class="proj" href="#${id}"><img src="fotos/${img}.jpg" alt="" loading="lazy"><div><span class="mono">${E.filter(e=>e.id===id)[0] ? fmt(E.find(e=>e.id===id).d) : ""}</span><h3>${t}</h3><p>${x}</p></div></a>`).join("");
+
+const YEAR_INTRO = {
+  "2025":"O primeiro ano de formação com a FLUPP: o portfólio começa a ser montado e a escola ganha site, vídeos e notícia na imprensa.",
+  "2026":"O segundo ano: Cantinho da Leitura, O caminho da água, banda com instrumentos novos e o VII Chá Literário."
+};
+let html = "", curY = "", curM = "";
+const gallery = [];
+for (const e of E) {
+  const [y,m] = e.d.split("-");
+  if (y !== curY) { curY = y; curM = ""; html += `<div class="year" id="y${y}"><h2>${y}</h2><p>${YEAR_INTRO[y]}</p></div>`; }
+  if (m !== curM) { curM = m; html += `<div class="month" data-month="${y}-${m}">${MES[+m-1]} de ${y}</div>`; }
+  const photos = (e.p||[]).map(id => { gallery.push({id, cap:`${e.t} · ${fmt(e.d)}`}); return `<button class="ph" data-i="${gallery.length-1}" aria-label="Ampliar foto: ${esc(e.t)}"><img src="fotos/${id}.jpg" alt="${esc(e.t)}" loading="lazy"></button>`; }).join("");
+  const vids = (e.v||[]).map(([id,cap]) => `<figure class="vid"><video controls preload="none" playsinline poster="videos/${id}.jpg" src="videos/${id}.mp4"></video><figcaption>${cap}</figcaption></figure>`).join("");
+  const list = e.li ? `<ul class="list">${e.li.map(([a,b]) => `<li><b>${a}</b><span>${b}</span></li>`).join("")}</ul>` : "";
+  const links = e.l ? `<div class="links">${e.l.map(([t,u]) => `<a href="${u}" target="_blank" rel="noopener">${t} ↗</a>`).join("")}</div>` : "";
+  const quote = e.q ? `<blockquote><p>“${e.q[0]}”</p><cite>${e.q[1]}</cite></blockquote>` : "";
+  html += `<article class="entry${e.nota?" nota":""}" id="${e.id}" data-cats="${e.c.join(" ")}" data-month="${y}-${m}">
+    <div class="stamp"><span class="date">${fmt(e.d)}</span>${e.c.map(c => `<span class="tag">${CATS[c]}</span>`).join("")}</div>
+    <div class="body"><h3>${e.t}</h3><p>${e.x}</p>${e.w ? `<p class="who">${e.w}</p>` : ""}${list}${quote}${links}
+      ${photos ? `<div class="photos${(e.p.length>=5)?" many":""}">${photos}</div>` : ""}
+      ${vids ? `<div class="vids">${vids}</div>` : ""}</div></article>`;
+}
+html += `<p class="empty" id="empty" hidden>Nenhum registro neste tema.</p>`;
+document.getElementById("timeline").innerHTML = html;
+
+document.getElementById("path").innerHTML = E.filter(e => e.c.includes("form") && !["site-portfolio","guilherme","natal-2025","ideb"].includes(e.id)).map(e =>
+  `<tr><th>${fmt(e.d)}</th><td><a href="#${e.id}"><b>${e.t}</b></a><span>${e.x}</span></td></tr>`).join("");
+document.getElementById("people").innerHTML = PEOPLE.map(([g,list]) =>
+  `<div class="group"><h3>${g}</h3><ul>${list.map(([n,r]) => `<li><b>${n}</b><span>${r}</span></li>`).join("")}</ul></div>`).join("");
+document.getElementById("voices").innerHTML = VOICES.map(([q,who,when]) =>
+  `<figure class="voice"><p>“${q}”</p><footer><b>${who}</b> · ${when}</footer></figure>`).join("");
+document.getElementById("press").innerHTML = PRESS.map(([d,t,u]) =>
+  `<li><span class="mono">${d}</span><a href="${u}" target="_blank" rel="noopener">${t} ↗</a></li>`).join("");
+
+/* ---------- filtros: marcador, bordas e setas ---------- */
+const reduceM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const shell = document.getElementById("barShell"), barEl = document.querySelector(".bar"), ind = chips.querySelector(".chip-ind");
+function moveInd(b){
+  ind.style.width = b.offsetWidth + "px"; ind.style.transform = `translateX(${b.offsetLeft}px)`;
+  const l = b.offsetLeft - (chips.clientWidth - b.offsetWidth) / 2;
+  chips.scrollTo({left: Math.max(0, l), behavior: reduceM ? "auto" : "smooth"});
+}
+function edge(){ shell.classList.toggle("at-start", chips.scrollLeft < 4); shell.classList.toggle("at-end", chips.scrollLeft + chips.clientWidth >= chips.scrollWidth - 4); }
+chips.addEventListener("scroll", edge, {passive:true});
+shell.insertAdjacentHTML("beforeend", '<button class="bar-arrow l" aria-label="Filtros anteriores">‹</button><button class="bar-arrow r" aria-label="Mais filtros">›</button>');
+shell.querySelectorAll(".bar-arrow").forEach(a => a.onclick = () => chips.scrollBy({left: a.classList.contains("l") ? -240 : 240, behavior: reduceM ? "auto" : "smooth"}));
+addEventListener("resize", () => { edge(); const p = chips.querySelector('.chip[aria-pressed="true"]'); ind.style.width = p.offsetWidth + "px"; ind.style.transform = `translateX(${p.offsetLeft}px)`; });
+requestAnimationFrame(() => { edge(); const a = chips.querySelector('[data-cat="all"]'); ind.style.width = a.offsetWidth + "px"; ind.style.transform = `translateX(${a.offsetLeft}px)`; });
+document.fonts && document.fonts.ready.then(() => { const p = chips.querySelector('.chip[aria-pressed="true"]'); ind.style.width = p.offsetWidth + "px"; ind.style.transform = `translateX(${p.offsetLeft}px)`; edge(); });
+if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => barEl.classList.toggle("stuck", !e.isIntersecting)).observe(document.querySelector("header.cover"));
+
+/* ---------- filtros ---------- */
+chips.addEventListener("click", ev => {
+  const b = ev.target.closest(".chip"); if (!b) return;
+  const cat = b.dataset.cat;
+  chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+  moveInd(b);
+  let shown = 0; const months = new Set();
+  document.querySelectorAll(".entry").forEach(a => {
+    const ok = cat === "all" || a.dataset.cats.split(" ").includes(cat);
+    a.hidden = !ok; if (ok) { shown++; months.add(a.dataset.month); }
+  });
+  document.querySelectorAll(".month").forEach(m => m.hidden = !months.has(m.dataset.month));
+  document.getElementById("empty").hidden = shown > 0;
+  if (!ev.isTrusted) return;
+  document.getElementById("linha").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+});
+
+/* ---------- lightbox ---------- */
+const lb = document.getElementById("lb"), lbi = document.getElementById("lbi"), lbc = document.getElementById("lbc");
+let cur = 0, last = null;
+function show(i){ cur = (i + gallery.length) % gallery.length; lbi.src = `fotos/${gallery[cur].id}.jpg`; lbi.alt = gallery[cur].cap; lbc.textContent = gallery[cur].cap; }
+document.getElementById("timeline").addEventListener("click", ev => {
+  const b = ev.target.closest(".ph"); if (!b) return;
+  last = b; show(+b.dataset.i); lb.hidden = false; document.getElementById("lbx").focus();
+  if (reduceM) return;
+  const r = b.getBoundingClientRect();
+  lbi.decode().catch(() => {}).then(() => {
+    const R = lbi.getBoundingClientRect(); if (!R.width) return;
+    lbi.animate([{transform:`translate(${r.left + r.width/2 - R.left - R.width/2}px,${r.top + r.height/2 - R.top - R.height/2}px) scale(${r.width / R.width})`, opacity:.5},{transform:"none", opacity:1}], {duration:380, easing:"cubic-bezier(.2,.8,.2,1)"});
+    lb.animate([{backgroundColor:"rgba(6,14,9,0)"},{backgroundColor:"rgba(6,14,9,.94)"}], {duration:300});
+  });
+});
+function close(){ lb.hidden = true; lbi.removeAttribute("src"); if (last) last.focus(); }
+document.getElementById("lbx").onclick = close;
+document.getElementById("lbp").onclick = () => show(cur-1);
+document.getElementById("lbn").onclick = () => show(cur+1);
+lb.addEventListener("click", ev => { if (ev.target === lb) close(); });
+document.addEventListener("keydown", ev => {
+  if (lb.hidden) return;
+  if (ev.key === "Tab") { const f = [...lb.querySelectorAll("button")]; const i = f.indexOf(document.activeElement); ev.preventDefault(); f[(i + (ev.shiftKey ? -1 : 1) + f.length) % f.length].focus(); return; }
+  if (ev.key === "Escape") close(); else if (ev.key === "ArrowLeft") show(cur-1); else if (ev.key === "ArrowRight") show(cur+1);
+});
+let tx = null;
+lb.addEventListener("touchstart", ev => { tx = ev.touches[0].clientX; }, {passive:true});
+lb.addEventListener("touchend", ev => { if (tx === null) return; const dx = ev.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); tx = null; });
+
+/* ---------- movimento e interação ---------- */
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* capa: fotos que se revezam */
+const REEL = [["20260612-0028","O caminho da água, Fazenda Água Viva, 2026"],["20250520-0074","1ª Exposição de Rochas e Minerais, 2025"],["20260924-0062","VII Chá Literário, 2026"],["20250702-0043","Festa Junina, 2025"],["20250605-0013","Horta escolar, 2025"],["20260515-0031","Festa das Mães, 2026"],["20251017-0064","Dia das Crianças, 2025"]];
+const reel = document.getElementById("reel"), reelcap = document.getElementById("reelcap"), reeldots = document.getElementById("reeldots");
+REEL.forEach(([id], i) => { const im = new Image(); im.src = `fotos/${id}.jpg`; im.alt = ""; if (i === 0) im.className = "on"; reel.insertBefore(im, reelcap); reeldots.insertAdjacentHTML("beforeend", `<i${i===0?' class="on"':''}></i>`); });
+reelcap.textContent = REEL[0][1];
+let ri = 0, paused = false;
+reel.insertAdjacentHTML("beforeend", `<button class="reel-pause" id="reelPause" aria-label="Pausar fotos">❚❚</button>`);
+const rp = document.getElementById("reelPause");
+rp.onclick = () => { paused = !paused; rp.textContent = paused ? "▶" : "❚❚"; rp.setAttribute("aria-label", paused ? "Retomar fotos" : "Pausar fotos"); };
+reel.addEventListener("mouseenter", () => reel.dataset.hover = 1); reel.addEventListener("mouseleave", () => delete reel.dataset.hover);
+if (!reduce) setInterval(() => {
+  if (paused || reel.dataset.hover) return;
+  const ims = reel.querySelectorAll("img"), ds = reeldots.querySelectorAll("i");
+  ims[ri].classList.remove("on"); ds[ri].classList.remove("on");
+  ri = (ri + 1) % ims.length; ims[ri].classList.add("on"); ds[ri].classList.add("on"); reelcap.textContent = REEL[ri][1];
+}, 4200);
+
+/* números que contam */
+if (!reduce) document.querySelectorAll("#facts b").forEach(b => {
+  const end = +b.textContent, t0 = performance.now(), dur = 1400;
+  const step = t => { const k = Math.min(1, (t - t0) / dur); b.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+});
+
+/* barra de progresso de leitura */
+const prog = document.getElementById("progress");
+addEventListener("scroll", () => { const h = document.documentElement; prog.style.transform = `scaleX(${h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)})`; }, {passive:true});
+
+/* mapa dos meses */
+const counts = {}; E.forEach(e => { const k = e.d.slice(0,7); counts[k] = (counts[k]||0) + 1; });
+const keys = []; for (let y = 2025, m = 4; y < 2026 || m <= 10; ) { keys.push(`${y}-${String(m).padStart(2,"0")}`); m++; if (m > 12) { m = 1; y++; } }
+const maxC = Math.max(...Object.values(counts));
+const MS = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+document.getElementById("months").innerHTML = keys.map(k => {
+  const n = counts[k] || 0, [y,m] = k.split("-");
+  return `<button class="mbar${m==="09"?" is-cha":""}" data-k="${k}" aria-label="${MES[+m-1]} de ${y}: ${n} momentos"><b>${n||""}</b><i style="height:${n? 12 + 88*n/maxC : 3}px"></i><span>${MS[+m-1]}<br>${y.slice(2)}</span></button>`;
+}).join("");
+document.getElementById("months").addEventListener("click", ev => {
+  const b = ev.target.closest(".mbar"); if (!b) return;
+  const t = document.querySelector(`.month[data-month="${b.dataset.k}"]`);
+  if (t) { if (t.hidden) chips.querySelector('[data-cat="all"]').click(); t.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); }
+});
+if (!reduce && "IntersectionObserver" in window) {
+  const bars = document.querySelectorAll(".mbar i"); bars.forEach(i => i.style.transform = "scaleY(.15)");
+  new IntersectionObserver((en, ob) => { if (en[0].isIntersecting) { bars.forEach((i,n) => setTimeout(() => i.style.transform = "scaleY(1)", n*40)); ob.disconnect(); } }, {threshold:.3}).observe(document.getElementById("months"));
+}
+
+/* especial VII Chá: cortina e programa */
+const ACTS = [
+  ["Apresentação","6º e 7º ano","Jeinneffer Carvalho","A Lagartinha Comilona","Contação da história de Eric Carle (conto e fábula), com a turma vestida de lagartas.",["img","20260924-0115"]],
+  ["Apresentação","Educação Infantil","Laiza Rodrigues","A vida da Borboleta","Projeto conjunto com o 6º e 7º ano: os pequenos também contaram a própria história.",["vid","20260925-0098"]],
+  ["Apresentação","1º, 2º e 3º ano","Naureni de J. Costa","Folclore brasileiro","Contos populares, parlendas, adivinhas e cantigas, com personagens do folclore.",["img","20260924-0096"]],
+  ["Apresentação","4º e 5º ano","Edimar Costa dos Santos","Meu Abrigo","Poesia de Gabriela e Rodrigo Melim, em cerca de 4 minutos.",null],
+  ["Apresentação","8º e 9º ano","Rosângela Ferreira Dias","Obras de arte","Girassóis, Flor de Cerejeira, A Poltrona Vermelha e Amendoeira em Flor (Van Gogh, Picasso, Olga Darchuk), pintadas pela turma.",["img","20260825-0007"]],
+  ["Apresentação","Ensino Médio","Ana Maria Pereira","O Auto da Compadecida","Teatro a partir da obra de Ariano Suassuna, em cerca de 7 minutos.",null],
+  ["Encerramento","Cena final","Registro em vídeo","Cena de encerramento","A cena que fechou a noite, gravada no palco do pátio.",["vid","20260924-0123"]]
+];
+const program = document.getElementById("program"), detail = document.getElementById("actDetail");
+program.innerHTML = ACTS.map((a,i) => `<button class="act" data-i="${i}" aria-pressed="${i===0}"><small>${a[0]} · ${a[1]}</small><b>${a[3]}</b><span>${a[2]}</span></button>`).join("");
+function showAct(i){
+  const a = ACTS[i];
+  program.querySelectorAll(".act").forEach((b,n) => b.setAttribute("aria-pressed", String(n===i)));
+  const media = !a[5] ? `<img src="fotos/20260925-0028.jpg" alt="Equipe no painel de boas-vindas do VII Chá Literário">`
+    : a[5][0] === "img" ? `<img src="fotos/${a[5][1]}.jpg" alt="${a[3]}">`
+    : `<video controls playsinline preload="none" poster="videos/${a[5][1]}.jpg" src="videos/${a[5][1]}.mp4"></video>`;
+  detail.innerHTML = `<div>${media}</div><div><small class="mono" style="color:var(--ipe)">${a[0]} · ${a[1]}</small><h3>${a[3]}</h3><p>${a[4]}</p><p><b>${a[0]==="Encerramento"?"Fonte":"Professora/professor"}:</b> ${a[2]}</p></div>`;
+}
+showAct(0);
+program.addEventListener("click", ev => { const b = ev.target.closest(".act"); if (b) showAct(+b.dataset.i); });
+const stage = document.getElementById("stage");
+const openBtn = document.getElementById("openStage");
+const openStage = () => { stage.classList.add("open"); setTimeout(() => openBtn.hidden = true, 400); };
+openBtn.onclick = openStage;
+if (reduce) openStage();
+else if ("IntersectionObserver" in window) new IntersectionObserver((en, ob) => { if (en[0].isIntersecting) { setTimeout(openStage, 600); ob.disconnect(); } }, {threshold:.6}).observe(stage);
+
+/* âncoras internas: rolar sem navegar o quadro e mostrar tudo se o filtro esconder o alvo */
+document.documentElement.lang = "pt-BR";
+document.addEventListener("click", ev => {
+  const a = ev.target.closest('a[href^="#"]'); if (!a) return;
+  const t = document.getElementById(a.getAttribute("href").slice(1)); if (!t) return;
+  ev.preventDefault();
+  if (t.hidden || t.closest("[hidden]")) chips.querySelector('[data-cat="all"]').click();
+  requestAnimationFrame(() => t.scrollIntoView({behavior: reduce ? "auto" : "smooth"}));
+});
+
+/* registros entram em cena ao rolar (o repouso é visível) */
+if (!reduce && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(en => en.forEach(x => { if (x.isIntersecting) { x.target.classList.remove("pre"); io.unobserve(x.target); } }), {rootMargin:"0px 0px -10% 0px"});
+  document.querySelectorAll(".entry").forEach(a => { if (a.getBoundingClientRect().top > innerHeight) { a.classList.add("pre"); io.observe(a); } });
+}
+
+/* cartões de projeto com leve inclinação */
+if (!reduce && matchMedia("(hover: hover)").matches) document.querySelectorAll(".proj").forEach(c => {
+  c.addEventListener("mousemove", ev => { const r = c.getBoundingClientRect(), x = (ev.clientX - r.left)/r.width - .5, y = (ev.clientY - r.top)/r.height - .5; c.style.transform = `perspective(700px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-2px)`; });
+  c.addEventListener("mouseleave", () => c.style.transform = "");
+});
+
+/* modo apresentação no visualizador de fotos */
+let timer = null; const playBtn = document.getElementById("lbplay"), lbbar = document.getElementById("lbbar");
+function stopPlay(){ clearInterval(timer); timer = null; playBtn.textContent = "▶ Apresentação"; lbbar.style.transition = "none"; lbbar.style.width = "0"; }
+function tick(){ lbbar.style.transition = "none"; lbbar.style.width = "0"; requestAnimationFrame(() => { lbbar.style.transition = "width 3.5s linear"; lbbar.style.width = "100%"; }); }
+playBtn.onclick = () => { if (timer) return stopPlay(); playBtn.textContent = "❚❚ Pausar"; tick(); timer = setInterval(() => { show(cur+1); tick(); }, 3500); };
+document.getElementById("lbx").addEventListener("click", stopPlay);
+lb.addEventListener("click", ev => { if (ev.target === lb) stopPlay(); });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") stopPlay(); });
+
+/* carimbo do mês durante a leitura da linha do tempo */
+const nowEl = document.createElement("span"); nowEl.className = "now"; nowEl.setAttribute("aria-hidden", "true"); document.body.appendChild(nowEl);
+const linha = document.getElementById("linha"), tl = document.getElementById("timeline");
+function updateNow(){
+  const lr = linha.getBoundingClientRect();
+  if (lr.top > 120 || lr.bottom < 160) { nowEl.classList.remove("show"); return; }
+  let curMonth = null;
+  document.querySelectorAll(".month:not([hidden])").forEach(m => { if (m.getBoundingClientRect().top < 160) curMonth = m; });
+  if (!curMonth) { nowEl.classList.remove("show"); return; }
+  if (nowEl.textContent !== curMonth.textContent) { nowEl.classList.remove("show"); nowEl.textContent = curMonth.textContent; }
+  requestAnimationFrame(() => nowEl.classList.add("show"));
+}
+/* trilha que se preenche conforme a leitura */
+function updateFill(){
+  const r = tl.getBoundingClientRect(), k = Math.min(1, Math.max(0, (innerHeight * .6 - r.top) / r.height));
+  tl.style.setProperty("--fill", (k * 100).toFixed(1) + "%");
+}
+let ticking = false;
+addEventListener("scroll", () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { updateNow(); if (!reduce) updateFill(); ticking = false; }); }, {passive:true});
+if (reduce) tl.style.setProperty("--fill", "100%"); else updateFill();
+
+/* seções: régua laranja e cartões em cascata */
+if (!reduce && "IntersectionObserver" in window) {
+  const io2 = new IntersectionObserver(en => en.forEach(x => { if (x.isIntersecting) { x.target.classList.replace("pre", "in"); io2.unobserve(x.target); } }), {rootMargin:"0px 0px -15% 0px"});
+  document.querySelectorAll("section.block").forEach(s => {
+    if (s.getBoundingClientRect().top < innerHeight) return;
+    s.classList.add("pre"); s.querySelectorAll(".proj,.voice,.next div").forEach((c,i) => c.style.setProperty("--i", i % 8)); io2.observe(s);
+  });
+}
+
+if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
+</script>
