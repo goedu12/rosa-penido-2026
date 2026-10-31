@@ -1,0 +1,380 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Portfólio Rosa Penido 2025–2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+@page { size:A4; margin:16mm 15mm 20mm 15mm; }
+@page :first { margin:0; }
+@page full { margin:0; }
+:root { --navy:#183149; --orange:#F18407; --orange-d:#B85F00; --ink2:#55657A; --line:#E1E6ED; --soft:#FDF1E4; --bg:#F7F8FA; }
+* { box-sizing:border-box; }
+html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body { margin:0; font:10pt/1.5 "Figtree", "Segoe UI", sans-serif; color:var(--navy); }
+h1,h2,h3,h4 { font-family:"Literata", Georgia, serif; margin:0; line-height:1.2; }
+.mono { font-family:"IBM Plex Mono", Consolas, monospace; letter-spacing:.1em; text-transform:uppercase; font-size:7.5pt; }
+img { display:block; object-fit:cover; }
+.break { break-before:page; }
+
+/* CAPA */
+.cover { page:full; width:210mm; height:297mm; position:relative; overflow:hidden; background:#fff; }
+.cover .top { padding:18mm 18mm 0; display:flex; justify-content:space-between; align-items:center; }
+.cover .top img { height:11mm; width:auto; object-fit:contain; }
+.cover .top span { color:var(--ink2); }
+.cover .flower { position:absolute; right:-40mm; top:-30mm; width:150mm; height:150mm; opacity:.9; }
+.cover .title { position:relative; padding:26mm 18mm 0; }
+.cover h1 { font-size:40pt; font-weight:600; letter-spacing:-.01em; }
+.cover h1 em { display:block; font-style:italic; font-weight:400; color:var(--orange); }
+.cover .sub { font-size:12.5pt; color:var(--ink2); max-width:130mm; margin-top:6mm; }
+.cover .mosaic { position:absolute; left:18mm; right:18mm; top:142mm; height:105mm; display:grid; grid-template-columns:2fr 1fr; grid-template-rows:1fr 1fr; gap:3mm; }
+.cover .mosaic img { width:100%; height:100%; border-radius:3mm; }
+.cover .mosaic img:first-child { grid-row:span 2; }
+.cover .foot { position:absolute; left:0; right:0; bottom:0; height:30mm; background:var(--navy); color:#fff; padding:9mm 18mm; display:flex; justify-content:space-between; align-items:center; }
+.cover .foot b { font-family:"Literata", serif; font-size:13pt; font-weight:600; }
+.cover .foot span { color:#C9D3DE; font-size:9pt; text-align:right; }
+
+/* ABERTURA DE SEÇÃO */
+.kick { color:var(--orange-d); }
+.sec h2 { font-size:24pt; font-weight:600; margin:2mm 0 3mm; }
+.sec .lead { font-size:11pt; color:var(--ink2); max-width:150mm; margin:0 0 6mm; }
+.rule { height:1.2mm; width:22mm; background:var(--orange); margin:4mm 0 6mm; border-radius:1mm; }
+p { margin:0 0 2.5mm; }
+
+.intro-cols { display:grid; grid-template-columns:1.3fr 1fr; gap:10mm; }
+.nums { display:grid; grid-template-columns:1fr 1fr; gap:3mm; }
+.num { background:var(--bg); border-radius:2mm; padding:4mm; }
+.num b { display:block; font:600 22pt "Literata", serif; color:var(--orange-d); line-height:1.1; }
+.num span { font-size:8.5pt; color:var(--ink2); }
+.toc { list-style:none; padding:0; margin:6mm 0 0; counter-reset:t; }
+.toc li { counter-increment:t; padding:2.2mm 0; border-top:1px solid var(--line); display:flex; gap:4mm; }
+.toc li::before { content:counter(t, decimal-leading-zero); font:500 8pt "IBM Plex Mono", monospace; color:var(--orange-d); padding-top:1mm; }
+.bars { margin-top:4mm; }
+.bar { display:grid; grid-template-columns:42mm 1fr 8mm; gap:3mm; align-items:center; padding:1.6mm 0; }
+.bl { font-size:9pt; }
+.bt { background:var(--bg); height:4mm; border-radius:1mm; overflow:hidden; }
+.bt i { display:block; height:100%; background:var(--navy); }
+.bar b { font-variant-numeric:tabular-nums; text-align:right; }
+
+.cards { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.card { display:grid; grid-template-columns:34mm 1fr; gap:3.5mm; border:1px solid var(--line); border-radius:2mm; overflow:hidden; break-inside:avoid; }
+.card img { width:100%; height:100%; min-height:30mm; }
+.card div { padding:3mm 3mm 3mm 0; }
+.card h4 { font-size:11pt; margin-bottom:1mm; }
+.card p { font-size:8.5pt; color:var(--ink2); margin:0; }
+
+/* ESPECIAL CHÁ */
+.cha { page:full; background:var(--navy); color:#fff; padding:16mm 15mm; min-height:297mm; }
+.cha .kick { color:var(--orange); }
+.cha h2 { font-size:30pt; color:#fff; }
+.cha .lead { color:#C9D3DE; }
+.cha table { width:100%; border-collapse:collapse; font-size:8.8pt; margin-top:3mm; }
+.cha th { text-align:left; color:var(--orange); font:500 7.5pt "IBM Plex Mono", monospace; text-transform:uppercase; letter-spacing:.06em; padding:2mm 3mm 2mm 0; vertical-align:top; width:28mm; border-top:1px solid rgba(255,255,255,.15); }
+.cha td { padding:2mm 3mm 2mm 0; vertical-align:top; border-top:1px solid rgba(255,255,255,.15); color:#E4EAF1; }
+.cha td b { font-family:"Literata", serif; color:#fff; font-size:10pt; }
+.cha td span { color:#AFC0D2; font-size:8pt; }
+.chagrid { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5mm; margin-top:6mm; }
+.chagrid img { width:100%; aspect-ratio:4/3; border-radius:2mm; }
+.cha2 { page:full; background:#fff; padding:16mm 15mm; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.prepgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:2.5mm; margin:4mm 0 6mm; }
+.prepgrid img { width:100%; aspect-ratio:1/1; border-radius:2mm; }
+
+/* LINHA DO TEMPO */
+.yearhead { display:flex; align-items:baseline; gap:6mm; }
+.yearhead h2 { font-size:54pt; font-style:italic; font-weight:400; color:var(--orange); }
+h2.month { font:500 8.5pt "IBM Plex Mono", monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--navy); border-bottom:.6mm solid var(--navy); padding-bottom:1.5mm; margin:7mm 0 1mm; break-after:avoid; }
+.entry { display:grid; grid-template-columns:27mm 1fr; gap:5mm; padding:4mm 0; border-bottom:1px solid var(--line); break-inside:avoid; }
+.meta { display:flex; flex-direction:column; gap:1.5mm; }
+.date { font:500 8.5pt "IBM Plex Mono", monospace; color:var(--orange-d); border:1.2px solid var(--orange); border-radius:1mm; padding:.8mm 1.8mm; width:max-content; }
+.tags { font-size:7pt; text-transform:uppercase; letter-spacing:.05em; color:var(--ink2); line-height:1.4; }
+.body h3 { font-size:13pt; font-weight:600; margin-bottom:1.5mm; }
+.body p { font-size:9.4pt; }
+.who { font-size:8.6pt !important; color:var(--ink2); }
+.ph { display:grid; gap:2mm; margin-top:2.5mm; }
+.ph.n1 { grid-template-columns:70mm; } .ph.n2 { grid-template-columns:1fr 1fr; } .ph.n3 { grid-template-columns:1fr 1fr 1fr; }
+.ph img { width:100%; height:34mm; border-radius:1.5mm; }
+.ph.n1 img { height:46mm; }
+.more { font-size:7.8pt !important; color:var(--ink2); margin-top:1.5mm; font-style:italic; }
+table.li { width:100%; border-collapse:collapse; font-size:8.4pt; margin:1.5mm 0 2mm; }
+table.li th { text-align:left; padding:1.2mm 3mm 1.2mm 0; border-top:1px dashed var(--line); width:46mm; font-weight:600; vertical-align:top; }
+table.li td { padding:1.2mm 0; border-top:1px dashed var(--line); color:var(--ink2); }
+blockquote { margin:2mm 0; padding:2.5mm 4mm; background:var(--soft); border-left:1mm solid var(--orange); font:italic 10pt "Literata", serif; }
+blockquote cite { display:block; font:normal 8pt "Figtree", sans-serif; color:var(--ink2); margin-top:1mm; }
+.src { font-size:7.8pt !important; color:var(--ink2); word-break:break-all; }
+
+article.nota { display:grid; grid-template-columns:27mm 1fr; gap:5mm; padding:2.5mm 3mm 2.5mm 0; margin:2mm 0; background:var(--soft); border-radius:1.5mm; font-size:8.8pt; break-inside:avoid; }
+article.nota .date { margin-left:3mm; height:max-content; }
+article.nota b { font-family:"Literata", serif; }
+.people { columns:2; column-gap:10mm; }
+.pg { break-inside:avoid; margin-bottom:6mm; }
+.pg h4 { font:500 8pt "IBM Plex Mono", monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--orange-d); margin-bottom:2mm; }
+.pg ul { list-style:none; margin:0; padding:0; }
+.pg li { padding:1.5mm 0; border-top:1px solid var(--line); display:flex; flex-direction:column; }
+.pg li b { font-family:"Literata", serif; font-size:10pt; }
+.pg li span { font-size:8.4pt; color:var(--ink2); }
+.voices { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.voices figure { margin:0; background:var(--bg); border-radius:2mm; padding:5mm; break-inside:avoid; }
+.voices p { font:italic 11pt/1.45 "Literata", serif; }
+.voices figcaption { font-size:8.4pt; color:var(--ink2); }
+table.press { width:100%; border-collapse:collapse; font-size:9pt; }
+table.press th { text-align:left; width:24mm; padding:2mm 3mm 2mm 0; border-top:1px solid var(--line); font:500 8pt "IBM Plex Mono", monospace; color:var(--ink2); vertical-align:top; }
+table.press td { padding:2mm 0; border-top:1px solid var(--line); }
+table.press td span { font-size:7.8pt; color:var(--ink2); word-break:break-all; }
+.credits { margin-top:10mm; padding:6mm; background:var(--bg); border-radius:2mm; font-size:9pt; }
+.credits img { height:9mm; width:auto; object-fit:contain; margin-bottom:3mm; }
+</style></head><body>
+
+<section class="cover">
+  <svg class="flower" viewBox="0 0 520 520"><g fill="none" stroke="#F18407" stroke-width="1.6"><circle cx="260" cy="260" r="90"/><circle cx="260" cy="170" r="90"/><circle cx="338" cy="215" r="90"/><circle cx="338" cy="305" r="90"/><circle cx="260" cy="350" r="90"/><circle cx="182" cy="305" r="90"/><circle cx="182" cy="215" r="90"/></g></svg>
+  <div class="top"><img src="logo_flupp.png" alt="FLUPP"><span class="mono">Formação Continuada</span></div>
+  <div class="title">
+    <div class="mono kick">Portfólio de ações</div>
+    <h1>Escola Rosa Penido<em>2025–2026</em></h1>
+    <p class="sub">Projetos, comemorações, formações e parcerias da Escola Municipal Dona Rosa Penido Dalla Vecchia, de abril de 2025 a outubro de 2026.</p>
+  </div>
+  <div class="mosaic"><img src="fotos/20260924-0105.jpg" alt=""><img src="fotos/20250520-0074.jpg" alt=""><img src="fotos/20260612-0028.jpg" alt=""></div>
+  <div class="foot"><b>Vila Roncador · Cocalinho, MT</b><span>Fundação Lucia e Pelerson Penido<br>Outubro de 2026</span></div>
+</section>
+
+<section class="sec break">
+  <div class="mono kick">Apresentação</div>
+  <h2>Dois anos de escola viva</h2><div class="rule"></div>
+  <div class="intro-cols">
+    <div>
+      <p>Este portfólio reúne as ações da Escola Municipal Dona Rosa Penido Dalla Vecchia registradas entre abril de 2025 e outubro de 2026, período de acompanhamento pedagógico da Fundação Lucia e Pelerson Penido (FLUPP).</p>
+      <p>Cada ação traz a data, o tema, a turma e os profissionais responsáveis, além de fotos selecionadas. O conteúdo foi construído a partir das mensagens, fotos e vídeos que a equipe compartilhou no grupo "FLUPP – Formação 2025", com 1.165 fotos e 250 vídeos no acervo.</p>
+      <p>O objetivo é dar visibilidade ao trabalho da equipe, registrar a história da escola e reunir evidências de aprendizagem que apoiem as próximas decisões pedagógicas.</p>
+      <ol class="toc"><li>Ações por tema</li><li>Projetos em destaque</li><li>Especial VII Chá Literário</li><li>Linha do tempo 2025</li><li>Linha do tempo 2026</li><li>Quem fez</li><li>Vozes</li><li>Imprensa, fontes e ficha técnica</li></ol>
+    </div>
+    <div class="nums">
+      <div class="num"><b>64</b><span>ações registradas</span></div>
+      <div class="num"><b>19</b><span>meses de acompanhamento</span></div>
+      <div class="num"><b>326</b><span>fotos no portfólio online</span></div>
+      <div class="num"><b>43</b><span>vídeos no portfólio online</span></div>
+      <div class="num"><b>2</b><span>Chás Literários</span></div>
+      <div class="num"><b>40</b><span>pessoas e parceiros citados</span></div>
+    </div>
+  </div>
+  <div class="sec" style="margin-top:10mm">
+    <div class="mono kick">01 · Ações por tema</div>
+    <h2 style="font-size:16pt">Onde a escola concentrou o trabalho</h2>
+    <p class="lead" style="font-size:9.5pt">Número de ações por tema. Uma ação pode ter mais de um tema.</p>
+    <div class="bars"><div class="bar"><span class="bl">Comemorações</span><span class="bt"><i style="width:100.0%"></i></span><b>22</b></div><div class="bar"><span class="bl">Escola e comunidade</span><span class="bt"><i style="width:77.3%"></i></span><b>17</b></div><div class="bar"><span class="bl">Projetos de sala</span><span class="bt"><i style="width:63.6%"></i></span><b>14</b></div><div class="bar"><span class="bl">Leitura e literatura</span><span class="bt"><i style="width:45.5%"></i></span><b>10</b></div><div class="bar"><span class="bl">Arte e cultura</span><span class="bt"><i style="width:40.9%"></i></span><b>9</b></div><div class="bar"><span class="bl">Formação</span><span class="bt"><i style="width:40.9%"></i></span><b>9</b></div><div class="bar"><span class="bl">Meio ambiente e campo</span><span class="bt"><i style="width:40.9%"></i></span><b>9</b></div><div class="bar"><span class="bl">Cidadania e saúde</span><span class="bt"><i style="width:36.4%"></i></span><b>8</b></div></div>
+  </div>
+</section>
+
+<section class="sec break">
+  <div class="mono kick">02 · Projetos em destaque</div>
+  <h2>O que atravessou os dois anos</h2><div class="rule"></div>
+  <div class="cards"><div class="card"><img src="fotos/20260924-0115.jpg" alt=""><div><h4>Especial VII Chá Literário</h4><p>A noite de 24/09/2026 em detalhe: preparação, bastidores, as oito cenas e as entrevistas.</p></div></div><div class="card"><img src="fotos/20250925-0046.jpg" alt=""><div><h4>Chá Literário 2025</h4><p>O VI Chá, com oito apresentações, premiação literária e os músicos da escola.</p></div></div><div class="card"><img src="fotos/20260612-0024.jpg" alt=""><div><h4>Meio ambiente</h4><p>Coleta seletiva em 2025; O caminho da água em 2026, com culminância na Fazenda Água Viva.</p></div></div><div class="card"><img src="fotos/20250605-0013.jpg" alt=""><div><h4>Horta escolar</h4><p>Agroecologia e Saberes do Campo: do adubo ao lanche das crianças.</p></div></div><div class="card"><img src="fotos/20250520-0067.jpg" alt=""><div><h4>Rochas e Minerais</h4><p>A 1ª exposição, organizada pelo 4º e 5º ano com apoio da Cavasa.</p></div></div><div class="card"><img src="fotos/20250701-0023.jpg" alt=""><div><h4>Jogar, Brincar e Aprender</h4><p>Dois dias de jogos, da Educação Infantil ao Ensino Médio.</p></div></div><div class="card"><img src="fotos/20260424-0013.jpg" alt=""><div><h4>Cantinho da Leitura</h4><p>Inaugurado pelos alunos em 2026, com 30 minutos de leitura literária por turma.</p></div></div><div class="card"><img src="fotos/20250625-0022.jpg" alt=""><div><h4>Arte na escola</h4><p>Grafite de Marcos Vinícius, arte indígena, Van Gogh e a banda.</p></div></div><div class="card"><img src="fotos/20260910-0050.jpg" alt=""><div><h4>Cidadania</h4><p>Bullying, Conselho Tutelar, Setembro Amarelo e a Conferência dos Direitos.</p></div></div><div class="card"><img src="fotos/20260901-0079.jpg" alt=""><div><h4>Formação FLUPP</h4><p>Encontros na escola, Semana Pedagógica e o acompanhamento dos planos.</p></div></div></div>
+</section>
+
+<section class="cha break">
+  <div class="mono kick">03 · Especial · 24 de setembro de 2026</div>
+  <h2>VII Chá Literário</h2><div class="rule"></div>
+  <p class="lead">Às 19h, no pátio da escola, a Escola Dona Rosa Penido e a Escola Gruta Azul apresentaram à comunidade o que leram no ano. Sete apresentações, um encerramento em cena e, depois, entrevistas com estudantes, professores, famílias e convidados.</p>
+  <table><tr><th>1ª apresentação</th><td><b>A Lagartinha Comilona</b><br><span>6º e 7º ano · Jeinneffer Carvalho</span></td><td>Contação da história de Eric Carle, com a turma vestida de lagartas.</td></tr><tr><th>Junto com a 1ª</th><td><b>A vida da Borboleta</b><br><span>Educação Infantil · Laiza Rodrigues</span></td><td>Projeto conjunto com o 6º e 7º ano: os pequenos também contaram a própria história.</td></tr><tr><th>2ª apresentação</th><td><b>Inclusão social em Libras</b><br><span>Turma integrada · Simone</span></td><td>Uma história contada em Língua Brasileira de Sinais.</td></tr><tr><th>3ª apresentação</th><td><b>Folclore brasileiro</b><br><span>1º, 2º e 3º ano · Naureni de J. Costa</span></td><td>Contos populares, parlendas, adivinhas e cantigas, com personagens do folclore.</td></tr><tr><th>4ª apresentação</th><td><b>Meu Abrigo</b><br><span>4º e 5º ano · Edimar Costa dos Santos</span></td><td>Poesia e música de Gabriela e Rodrigo Melim.</td></tr><tr><th>5ª apresentação</th><td><b>Obras de arte</b><br><span>8º e 9º ano · Rosângela Ferreira Dias</span></td><td>Girassóis, Flor de Cerejeira, A Poltrona Vermelha e Amendoeira em Flor (Van Gogh, Picasso, Olga Darchuk), pintadas pela turma.</td></tr><tr><th>6ª apresentação</th><td><b>O Casamento da Rosinha</b><br><span>Ensino Médio · Ana Maria Pereira</span></td><td>Teatro a partir de O Auto da Compadecida, de Ariano Suassuna.</td></tr><tr><th>Encerramento</th><td><b>A bruxa e a borboleta</b><br><span>Educação Infantil e 6º/7º ano · Laiza e Jeinneffer</span></td><td>A cena que fechou a noite.</td></tr></table>
+  <div class="chagrid"><img src="fotos/20260924-0115.jpg" alt=""><img src="fotos/20260924-0096.jpg" alt=""><img src="fotos/20260924-0120.jpg" alt=""><img src="fotos/20260925-0034.jpg" alt=""><img src="fotos/20260924-0112.jpg" alt=""><img src="fotos/20260925-0060.jpg" alt=""><img src="fotos/20260924-0066.jpg" alt=""><img src="fotos/20260924-0062.jpg" alt=""><img src="fotos/20260925-0028.jpg" alt=""></div>
+</section>
+
+<section class="cha2 break">
+  <div class="two">
+    <div>
+      <div class="mono kick">A preparação</div>
+      <h3 style="font-size:15pt;margin:2mm 0 3mm">De agosto até a véspera</h3>
+      <p>A preparação começou em agosto. Pedro reuniu, turma por turma, os gêneros literários trabalhados no primeiro semestre e montou o roteiro. Em sala, vieram as pinturas das obras de arte do 8º e 9º ano, a aula sobre o chá na horta, a sanfona de papel, os ensaios com violão e instrumentos de percussão, os potes e garrafas decorados pela turma multisseriada, as comidas típicas da região e as ervas medicinais que cada aluno trouxe de casa. Os alunos também gravaram o convite em vídeo.</p>
+      <div class="prepgrid"><img src="fotos/20260825-0007.jpg" alt=""><img src="fotos/20260825-0008.jpg" alt=""><img src="fotos/20260921-0039.jpg" alt=""><img src="fotos/20260918-0020.jpg" alt=""><img src="fotos/20260916-0067.jpg" alt=""><img src="fotos/20260923-0082.jpg" alt=""></div>
+    </div>
+    <div>
+      <div class="mono kick">Bastidores e cozinha</div>
+      <h3 style="font-size:15pt;margin:2mm 0 3mm">O pátio virou um livro</h3>
+      <p>Nos dois últimos dias, a equipe montou o cenário no pátio: corredor de entrada com letras coloridas no chão, personagens em tamanho real, portal de livro, palco com cortina e o painel de boas-vindas com o bule do chá. Na cozinha, biscoitos, roscas e pães foram preparados e assados para a noite, com copos, camisetas e embalagens personalizadas.</p>
+      <div class="mono kick" style="margin-top:6mm">Entrevistas</div>
+      <h3 style="font-size:15pt;margin:2mm 0 3mm">A palavra de quem estava lá</h3>
+      <p>Depois da última apresentação, Pedro circulou com o microfone e ouviu estudantes, professores, pais e convidados, seguindo um roteiro de perguntas: como foi participar, o que aprenderam nos ensaios, qual história mais marcou e que mensagem deixam para a escola. A equipe e os convidados posaram no painel de boas-vindas.</p>
+      <p class="who">Idealização <strong>Ana Maria Pereira</strong> · roteiro, registro e entrevistas <strong>Pedro</strong> · com a <strong>Escola Gruta Azul</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec break">
+  <div class="yearhead"><h2>2025</h2><p class="lead" style="margin:0">04 · Linha do tempo. O primeiro ano de formação com a FLUPP: o portfólio começa a ser montado e a escola ganha site, vídeos e notícia na imprensa.</p></div>
+  <h2 class="month">abril de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">16/04/2025</span><span class="tags">Arte e cultura · Projetos de sala</span></div>
+  <div class="body"><h3>Arte dos povos indígenas</h3><p>Depois de aulas sobre a cultura dos povos indígenas, as turmas do 6º e do 7º ano produziram painéis com elementos usados nos adereços e nas pinturas corporais. A arte seguiu ganhando novos elementos nas semanas seguintes.</p><p class="who"><strong>Lídia de Camargo</strong> · 6º e 7º anos</p><div class="ph n3"><img src="fotos/20250416-0004.jpg" alt=""><img src="fotos/20250416-0021.jpg" alt=""><img src="fotos/20250416-0019.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">23/04/2025</span><span class="tags">Projetos de sala · Comemorações</span></div>
+  <div class="body"><h3>Abril: Tiradentes e Páscoa</h3><p>Atividade de História sobre Tiradentes: infância, vida profissional, participação na Inconfidência Mineira e o significado da bandeira de Minas Gerais. No mesmo mês, um mural de Páscoa e um presente do grupo Roncador para a equipe.</p><p class="who"><strong>Ana Maria Pereira</strong></p><div class="ph n3"><img src="fotos/20250423-0014.jpg" alt=""><img src="fotos/20250423-0015.jpg" alt=""><img src="fotos/20250423-0016.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><article class="nota"><span class="date">24/04/2025</span><div><b>Atentos a editais.</b> O professor Guilherme trouxe a Chamada CNPq nº 01/2025 para Núcleos de Estudos em Agroecologia. A equipe FLUPP montou um checklist de requisitos e concluiu que a chamada exigia uma universidade pública ou instituto federal como proponente. O grupo seguiu de olho em novas oportunidades.</div></article><h2 class="month">maio de 2025</h2><article class="nota"><span class="date">16/05/2025</span><div><b>Rifa solidária.</b> A equipe vendeu rifas para ajudar uma família da comunidade. A ideia e a arrecadação dos prêmios foram do professor Guilherme.</div></article><article class="entry">
+  <div class="meta"><span class="date">19/05/2025</span><span class="tags">Projetos de sala · Comemorações</span></div>
+  <div class="body"><h3>Dia do Trabalho e Dia das Mães</h3><p>Cartazes sobre o 1º de maio contaram a história de familiares que trabalham na região, como um pai que trabalha em uma mina de calcário. As crianças também montaram no chão da sala uma grande mensagem de Feliz Dia das Mães.</p><div class="ph n3"><img src="fotos/20250519-0117.jpg" alt=""><img src="fotos/20250519-0125.jpg" alt=""><img src="fotos/20250519-0126.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">19/05/2025</span><span class="tags">Formação</span></div>
+  <div class="body"><h3>Encontro de formação FLUPP: Matemática</h3><p>Encontro presencial com a equipe, com foco no ensino de Matemática e na escolha das habilidades prioritárias do bimestre. A equipe também compartilhou o modelo de planejamento quinzenal usado pela escola.</p><p class="who">Formadores <strong>Vanuse Ribeiro</strong> e <strong>Leonardo Dantas</strong></p><div class="ph n3"><img src="fotos/20250519-0150.jpg" alt=""><img src="fotos/20250519-0151.jpg" alt=""><img src="fotos/20250519-0154.jpg" alt=""></div></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">20/05/2025</span><span class="tags">Projetos de sala · Meio ambiente e campo</span></div>
+  <div class="body"><h3>1ª Exposição de Rochas e Minerais</h3><p>Os estudantes do 4º e do 5º ano catalogaram rochas e minerais e apresentaram cada peça à comunidade, em mesas montadas ao ar livre. O evento contou com falas do diretor do Grupo Cavasa, Carlos Magno, e do gerente operacional Júnior, e virou notícia no portal Notícias Interativa.</p><p class="who">Catalogação com o professor <strong>Guilherme Barbosa</strong> · apoio <strong>Mineração Cavasa</strong></p><p class="src">Notícia: alunos realizam a 1ª exposição de rochas e minerais: <span>https://noticiasinterativa.com.br/noticias/cidades/31546-alunos-realizam-a-1-exposicao-de-rochas-e-minerais-na-escola-dona-rosa-penido</span></p><div class="ph n3"><img src="fotos/20250520-0074.jpg" alt=""><img src="fotos/20250506-0056.jpg" alt=""><img src="fotos/20250516-0028.jpg" alt=""></div><p class="more">No portfólio online: 10 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">junho de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">05/06/2025</span><span class="tags">Meio ambiente e campo · Projetos de sala</span></div>
+  <div class="body"><h3>Horta escolar no lanche</h3><p>Nas aulas de Agroecologia e Saberes do Campo, as turmas cultivaram pepino, rabanete, cebolinha, salsa e alface. A produção passou a complementar o lanche dos estudantes.</p><p class="who"><strong>Ana Maria Pereira</strong> e <strong>Rosângela Ferreira Dias</strong> · 6º/7º anos e Ensino Médio</p><div class="ph n3"><img src="fotos/20250605-0013.jpg" alt=""><img src="fotos/20250605-0011.jpg" alt=""><img src="fotos/20250605-0006.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">11/06/2025</span><span class="tags">Meio ambiente e campo · Projetos de sala</span></div>
+  <div class="body"><h3>Dia do Meio Ambiente: coleta seletiva</h3><p>As turmas viajaram de ônibus para um dia de apresentações ao ar livre sobre coleta seletiva e reaproveitamento. Os estudantes explicaram as cores das lixeiras, mostraram painéis e trabalhos com material reciclado e conversaram com os convidados.</p><p class="who">Toda a equipe, da Educação Infantil ao Ensino Médio</p><div class="ph n3"><img src="fotos/20250611-0032.jpg" alt=""><img src="fotos/20250611-0042.jpg" alt=""><img src="fotos/20250611-0024.jpg" alt=""></div><p class="more">No portfólio online: 8 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">16/06/2025</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Confraternização da equipe</h3><p>Uma noite de encontro e homenagem aos aniversariantes da equipe.</p><div class="ph n3"><img src="fotos/20250616-0058.jpg" alt=""><img src="fotos/20250616-0046.jpg" alt=""><img src="fotos/20250616-0042.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">23/06/2025</span><span class="tags">Meio ambiente e campo</span></div>
+  <div class="body"><h3>Coleta de insumos para adubar os canteiros</h3><p>As turmas saíram a campo para recolher esterco e preparar o adubo dos canteiros da horta. Como resumiu a professora Ana Maria, sair da sala é a melhor aula.</p><p class="who"><strong>Ana Maria Pereira</strong> e <strong>Rosângela Ferreira Dias</strong> · 6º/7º anos e Ensino Médio</p><div class="ph n3"><img src="fotos/20250623-0031.jpg" alt=""><img src="fotos/20250623-0033.jpg" alt=""><img src="fotos/20250623-0040.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">25/06/2025</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>Bullying não é brincadeira</h3><p>Ação dos alunos do Ensino Médio para conscientizar a escola sobre as práticas de bullying dentro e fora do espaço escolar, com foco em respeitar e acolher o próximo.</p><p class="who">Estudantes do Ensino Médio</p><div class="ph n3"><img src="fotos/20250625-0000.jpg" alt=""><img src="fotos/20250625-0004.jpg" alt=""><img src="fotos/20250625-0010.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">25/06/2025</span><span class="tags">Arte e cultura</span></div>
+  <div class="body"><h3>Arte na escola: grafite, Van Gogh e cultura xavante</h3><p>O grafite era objeto de conhecimento em algumas turmas e foi ampliado para as demais. Com o apoio de Marcos Vinícius, do 9º ano, apaixonado por grafite, os colegas acompanharam em tempo real como essa arte é produzida. O resultado é um mural na própria escola. Nas mesmas semanas, o 8º e o 9º ano recriaram uma obra de Vincent van Gogh com a professora Rosângela, e o professor Guilherme apresentou às turmas uma burduna, a borduna da cultura xavante.</p><p class="who">Estudante <strong>Marcos Vinícius</strong> (9º ano), com a professora <strong>Lídia de Camargo</strong> · <strong>Rosângela Ferreira Dias</strong> · <strong>Guilherme Barbosa</strong></p><div class="ph n3"><img src="fotos/20250625-0017.jpg" alt=""><img src="fotos/20250625-0022.jpg" alt=""><img src="fotos/20250625-0019.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">27/06/2025</span><span class="tags">Leitura e literatura · Projetos de sala</span></div>
+  <div class="body"><h3>Pasta sanfonada</h3><p>Cada estudante tem uma pasta sanfonada onde ficam os textos, as interpretações e as histórias que escreve. É por ela que a professora acompanha a evolução de cada um ao longo do ano.</p><p class="who"><strong>Naureni de J. Costa</strong> · 1º, 2º e 3º anos</p><div class="ph n3"><img src="fotos/20250627-0016v1.jpg" alt=""><img src="fotos/20250627-0017v1.jpg" alt=""><img src="fotos/20250627-0018v1.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">30/06/2025</span><span class="tags">Projetos de sala · Comemorações</span></div>
+  <div class="body"><h3>Projeto Jogar, Brincar e Aprender</h3><p>Dois dias de jogos e brincadeiras em três espaços ao mesmo tempo: corrida do saco, cabo de guerra, dança das cadeiras, estátua, queimada, corrida com balão, pular corda e cantigas na quadra de cimento; vôlei na quadra de areia; futebol no campo gramado, com times que juntaram turmas da Educação Infantil ao Ensino Médio.</p><p class="who">Coordenação <strong>Ednésio</strong> · professores <strong>Ana Maria</strong>, <strong>Guilherme</strong>, <strong>Laiza</strong>, <strong>Lídia</strong>, <strong>Naureni</strong> e <strong>Rosângela</strong> · apoio <strong>Bruno</strong> e <strong>Wilkner</strong></p><div class="ph n3"><img src="fotos/20250701-0019.jpg" alt=""><img src="fotos/20250701-0021.jpg" alt=""><img src="fotos/20250701-0023.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">julho de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">02/07/2025</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Festa Junina</h3><p>Apresentação junina das turmas da Educação Infantil ao 5º ano, com caipiras, chapéus de palha e mesa de comidas típicas.</p><p class="who"><strong>Laiza Rodrigues</strong>, <strong>Naureni de J. Costa</strong> e equipe</p><div class="ph n3"><img src="fotos/20250702-0043.jpg" alt=""><img src="fotos/20250702-0024.jpg" alt=""><img src="fotos/20250702-0059.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">03/07/2025</span><span class="tags">Escola e comunidade</span></div>
+  <div class="body"><h3>Mutirão de pintura da escola</h3><p>Nas férias de julho, a própria equipe pintou salas e corredores para receber as crianças no segundo semestre. Teve direito a churrasco no almoço.</p><p class="who">Equipe Rosa Penido</p><div class="ph n3"><img src="fotos/20250703-0036.jpg" alt=""><img src="fotos/20250703-0047.jpg" alt=""><img src="fotos/20250703-0055.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos.</p></div>
+</article><article class="nota"><span class="date">06/07/2025</span><div><b>No ar: site e portfólio da escola.</b> A prévia do site da escola entrou no ar, com seção de relatos de experiência, e o portfólio digital foi atualizado com fotos, vídeos e textos das ações do semestre.</div></article><h2 class="month">agosto de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">04/08/2025</span><span class="tags">Comemorações · Escola e comunidade</span></div>
+  <div class="body"><h3>Volta às aulas do segundo semestre</h3><p>Arco de balões, portas decoradas por turma e um café de boas-vindas. Mesmo com poucos alunos por causa da falta de dois transportes, todas as turmas voltaram.</p><div class="ph n3"><img src="fotos/20250804-0002.jpg" alt=""><img src="fotos/20250804-0006.jpg" alt=""><img src="fotos/20250804-0004.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">12/08/2025</span><span class="tags">Formação · Leitura e literatura</span></div>
+  <div class="body"><h3>Formação de agosto e escolha das obras literárias</h3><p>Dois dias de formação na escola. Na sequência, a professora Lídia compartilhou um estudo de como a resolução de problemas matemáticos no 6º ano mobiliza habilidades de Língua Portuguesa da BNCC, como ler o enunciado, inferir dados e explicar o raciocínio por escrito. Uma oficina de dobraduras e modelos em papel abriu novas possibilidades para a sala. A partir do encontro, cada professor escolheu um livro para a turma: Breve história de um pequeno amor, de Marina Colasanti, para o 6º e o 7º ano, e um livro da biblioteca da escola para o 1º ao 3º ano.</p><p class="who"><strong>Vanuse Ribeiro</strong>, <strong>Leonardo Dantas</strong> e <strong>Lídia de Camargo</strong> · <strong>Naureni de J. Costa</strong></p><div class="ph n3"><img src="fotos/20250826-0045.jpg" alt=""><img src="fotos/20250826-0043.jpg" alt=""><img src="fotos/20250828-0009.jpg" alt=""></div></div>
+</article><article class="nota"><span class="date">15/08/2025</span><div><b>Até breve, professor Guilherme.</b> Guilherme Barbosa se despediu da escola depois de ser aprovado em primeiro lugar em uma seleção para professores em Nova Nazaré, que tinha a elaboração de um plano de aula como última etapa. Ele atribuiu a conquista às formações e à acolhida da equipe. <i>“Hoje, acredito que vou fazer parte da história de vida dos meus alunos.” (Guilherme Barbosa)</i></div></article><h2 class="month">setembro de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">09/09/2025</span><span class="tags">Meio ambiente e campo</span></div>
+  <div class="body"><h3>Colheita de alface</h3><p>Alunos da Educação Infantil, do 3º e do 5º ano colheram alface na horta escolar, sem nenhum veneno. Em agosto, o lanche já tinha ganhado alface da horta de Cleonice, agente de saúde.</p><div class="ph n3"><img src="fotos/20250909-0002.jpg" alt=""><img src="fotos/20250909-0003.jpg" alt=""><img src="fotos/20250909-0006.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">25/09/2025</span><span class="tags">Leitura e literatura · Arte e cultura · Comemorações</span></div>
+  <div class="body"><h3>VI Chá Literário</h3><p>A noite em que as turmas apresentaram para a comunidade o que leram no ano, em ordem da Educação Infantil ao Ensino Médio. A Escola Gruta Azul também participou. O evento teve premiação literária, falas de convidados, professores e estudantes, e a música dos alunos que aprenderam a tocar com o apoio da Mineradora Cavasa. Encerrou com a música Era uma vez, de Sandy, apresentada pelas alunas Bianca e Sabriny.</p><p class="who">Idealização: <strong>Ana Maria Pereira</strong> · vídeos editados por <strong>Leonardo Dantas</strong></p><table class="li"><tr><th>Educação Infantil · Laiza</th><td>música Pega essa peneira (Marcelo Serralva)</td></tr><tr><th>Educação Infantil · Simone</th><td>música Cinco patinhos</td></tr><tr><th>1º ao 3º ano · Naureni</th><td>Escadinha da leitura, música com teatro, de autoria da professora</td></tr><tr><th>1º ao 5º ano · Simone</th><td>Branca de Neve (Irmãos Grimm)</td></tr><tr><th>4º e 5º ano · Edimar</th><td>música Aquarela (Toquinho)</td></tr><tr><th>6º e 7º ano · Lídia</th><td>adaptação teatral do filme O Garoto (Charlie Chaplin)</td></tr><tr><th>8º e 9º ano · Rosângela</th><td>Noite Estrelada, Mona Lisa, arte e meio ambiente (Van Gogh, Portinari, Da Vinci)</td></tr><tr><th>Ensino Médio · Ana Maria</th><td>O milagre da gaita, de O Auto da Compadecida (Ariano Suassuna)</td></tr></table><p class="src">Notícia: escolas promovem Chá Literário: <span>https://noticiasinterativa.com.br/noticias/educacao/32721-escolas-promovem-cha-literario-veja-video</span></p><div class="ph n3"><img src="fotos/20250925-0046.jpg" alt=""><img src="fotos/20250924-0031.jpg" alt=""><img src="fotos/20250924-0035.jpg" alt=""></div><p class="more">No portfólio online: 10 fotos, 2 vídeos.</p></div>
+</article><h2 class="month">outubro de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">10/10/2025</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Semana da Criança</h3><p>Dia de fantasia, cabelo maluco e painel de asas de borboleta, com algodão-doce e cachorro-quente. Os maiores vieram de caubói.</p><div class="ph n3"><img src="fotos/20251010-0017.jpg" alt=""><img src="fotos/20251010-0025.jpg" alt=""><img src="fotos/20251010-0032.jpg" alt=""></div><p class="more">No portfólio online: 9 fotos, 1 vídeo.</p></div>
+</article><article class="nota"><span class="date">15/10/2025</span><div><b>Dia dos Professores.</b> Homenagens da FLUPP e da vice-prefeita Eliane Barros aos professores da escola, incluindo os da extensão Calcário. <i>“Há algo de mágico em quem ensina: uma entrega silenciosa, uma paciência que acolhe, uma esperança que insiste.” (Fundação Lucia e Pelerson Penido)</i></div></article><article class="entry">
+  <div class="meta"><span class="date">17/10/2025</span><span class="tags">Comemorações · Escola e comunidade</span></div>
+  <div class="body"><h3>Dia das Crianças na Fazenda Água Viva</h3><p>Passeio de todas as turmas à Fazenda Água Viva, com brinquedos infláveis, piscina de bolinhas, cama elástica, touro mecânico, mesa farta e brincadeiras ao ar livre.</p><p class="who">Parceria <strong>Fazenda Água Viva</strong></p><div class="ph n3"><img src="fotos/20251017-0066.jpg" alt=""><img src="fotos/20251017-0064.jpg" alt=""><img src="fotos/20251017-0060.jpg" alt=""></div><p class="more">No portfólio online: 7 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">dezembro de 2025</h2><article class="entry">
+  <div class="meta"><span class="date">01/12/2025</span><span class="tags">Projetos de sala</span></div>
+  <div class="body"><h3>Energias renováveis</h3><p>Trabalho feito e apresentado pelo Ensino Médio, com maquetes e circuitos sobre tipos de energia renovável.</p><p class="who"><strong>Rosângela Ferreira Dias</strong> · Ensino Médio</p><div class="ph n3"><img src="fotos/20251201-0006.jpg" alt=""><img src="fotos/20251201-0005.jpg" alt=""><img src="fotos/20251201-0007.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">04/12/2025</span><span class="tags">Comemorações · Escola e comunidade</span></div>
+  <div class="body"><h3>Formatura 2025</h3><p>A escola organizou a formatura com uma rifa de bicicleta para custear a festa. O número sorteado foi vendido por Milena, do 9º ano. A cerimônia aconteceu em 04/12/2025.</p><p class="who">Organização <strong>Ana Maria Pereira</strong>, formandos e equipe</p><div class="ph n3"><img src="fotos/20251121-0009.jpg" alt=""><img src="fotos/20251124-0012.jpg" alt=""><img src="fotos/20251124-0013.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">24/12/2025</span><span class="tags">Comemorações · Formação</span></div>
+  <div class="body"><h3>Natal e a carta dos formadores</h3><p>Presépio na escola, cartão de Natal da FLUPP e uma carta dos formadores para cada membro da equipe: Ednésio, Ana Maria, Lídia, Laiza, Naureni, Edimar e Rosângela.</p><blockquote>“Foi um presente conhecer vocês.” <cite>Vanuse Ribeiro e Leonardo Dantas</cite></blockquote><div class="ph n3"><img src="fotos/20251124-0062.jpg" alt=""><img src="fotos/20251219-0054.jpg" alt=""><img src="fotos/20251224-0003.jpg" alt=""></div></div>
+</article>
+</section>
+
+<section class="sec break">
+  <div class="yearhead"><h2>2026</h2><p class="lead" style="margin:0">05 · Linha do tempo. O segundo ano: Cantinho da Leitura, O caminho da água, banda com instrumentos novos e o VII Chá Literário (ver o especial).</p></div>
+  <h2 class="month">janeiro de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">20/01/2026</span><span class="tags">Formação</span></div>
+  <div class="body"><h3>Semana Pedagógica da Seduc-MT em Cuiabá</h3><p>Formação estadual com oficinas, espaço organizado em colmeias, Tertúlia Literária e a cerimônia de posse dos servidores aprovados no concurso da Seduc-MT. Encontro com antigos colegas, como a professora Edna, da Escola Lúcia Penido, e com Silvia, chefe da DRE Barra do Garças.</p><p class="who"><strong>Ana Maria Pereira</strong> e coordenação</p><blockquote>“A arte existe porque a vida não basta.” <cite>Ferreira Gullar, citado por Ana Maria</cite></blockquote><div class="ph n3"><img src="fotos/20260120-0088.jpg" alt=""><img src="fotos/20260120-0061.jpg" alt=""><img src="fotos/20260120-0056.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><h2 class="month">fevereiro de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">02/02/2026</span><span class="tags">Meio ambiente e campo · Escola e comunidade</span></div>
+  <div class="body"><h3>Início do ano com as mãos na terra</h3><p>O ano começou com as turmas cuidando da área verde, da horta e do viveiro, plantando e cuidando das mudas.</p><p class="who"><strong>Rosângela Ferreira Dias</strong></p><div class="ph n3"><img src="fotos/20260202-0006.jpg" alt=""><img src="fotos/20260202-0010.jpg" alt=""><img src="fotos/20260309-0002.jpg" alt=""></div><p class="more">No portfólio online: 5 fotos.</p></div>
+</article><h2 class="month">março de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">05/03/2026</span><span class="tags">Meio ambiente e campo · Cidadania e saúde</span></div>
+  <div class="body"><h3>Palestra do INDEA</h3><p>Palestra do Instituto de Defesa Agropecuária sobre saúde animal e vegetal, para os alunos a partir do 4º ano.</p><div class="ph n3"><img src="fotos/20260305-0016.jpg" alt=""><img src="fotos/20260305-0019.jpg" alt=""><img src="fotos/20260305-0009.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">19/03/2026</span><span class="tags">Escola e comunidade</span></div>
+  <div class="body"><h3>Armários novos na cozinha</h3><p>Os armários foram comprados com o dinheiro de um evento realizado pela própria equipe, e montados por ela.</p><p class="who">Equipe Rosa Penido</p><div class="ph n3"><img src="fotos/20260319-0005.jpg" alt=""><img src="fotos/20260319-0007.jpg" alt=""><img src="fotos/20260319-0002.jpg" alt=""></div></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">23/03/2026</span><span class="tags">Meio ambiente e campo · Cidadania e saúde</span></div>
+  <div class="body"><h3>Dia Mundial da Água</h3><p>O Ensino Médio orientou a escola sobre o consumo consciente da água e produziu um vídeo sobre o tema.</p><p class="who">Ensino Médio · <strong>Ana Maria Pereira</strong></p><div class="ph n3"><img src="fotos/20260323-0012.jpg" alt=""><img src="fotos/20260323-0015.jpg" alt=""><img src="fotos/20260323-0010.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">27/03/2026</span><span class="tags">Projetos de sala · Comemorações</span></div>
+  <div class="body"><h3>Jogos populares brasileiros</h3><p>Aula de Educação Física com o Ensino Médio dedicada a jogos populares, como a guerra de balões.</p><p class="who"><strong>Jeinneffer Carvalho</strong> · Ensino Médio</p><div class="ph n3"><img src="fotos/20260327-0001.jpg" alt=""><img src="fotos/20260327-0003.jpg" alt=""><img src="fotos/20260327-0005.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="nota"><span class="date">30/03/2026</span><div><b>Visita ao professor Ednésio.</b> As turmas do 6º e do 7º ano foram visitar o professor Ednésio, levando carinho e lanche.</div></article><h2 class="month">abril de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">09/04/2026</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>Palestra do Conselho Tutelar</h3><p>O Conselho Tutelar conversou com os estudantes sobre direitos e proteção de crianças e adolescentes.</p><div class="ph n3"><img src="fotos/20260409-0007.jpg" alt=""><img src="fotos/20260409-0009.jpg" alt=""><img src="fotos/20260409-0008.jpg" alt=""></div></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">15/04/2026</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>Saúde em sala</h3><p>Ação de saúde nas salas, com pesagem, medida de altura e conversa com os estudantes.</p><p class="who">Registro compartilhado por <strong>Mauriane Lemes</strong></p><div class="ph n3"><img src="fotos/20260415-0019.jpg" alt=""><img src="fotos/20260415-0025.jpg" alt=""><img src="fotos/20260415-0029.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="nota"><span class="date">16/04/2026</span><div><b>Por que 21 de abril é feriado?.</b> Os estudantes investigaram a história de Tiradentes e o motivo do feriado.</div></article><article class="entry">
+  <div class="meta"><span class="date">17/04/2026</span><span class="tags">Arte e cultura</span></div>
+  <div class="body"><h3>A arte dos nossos meninos</h3><p>Um bom-dia com a arte dos estudantes, compartilhado pela professora Jeinneffer. A FLUPP propôs transformar o momento em uma ação de registro.</p><p class="who"><strong>Jeinneffer Carvalho</strong></p><div class="ph n3"><img src="fotos/20260417-0000v1.jpg" alt=""><img src="fotos/20260417-0000v2.jpg" alt=""><img src="fotos/20260417-0000v3.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">24/04/2026</span><span class="tags">Leitura e literatura</span></div>
+  <div class="body"><h3>Cantinho da Leitura</h3><p>O Cantinho da Leitura foi organizado com carinho e inaugurado pelos próprios alunos. Desde então, cada professor tem 30 minutos com a turma para leitura literária, conforme o cronograma. Para os menores, contação de história pela professora e pela auxiliar de sala e leitura de imagens.</p><p class="who">Organização <strong>Ana Maria Pereira</strong> · inauguração registrada por <strong>Jeinneffer Carvalho</strong></p><div class="ph n3"><img src="fotos/20260424-0013.jpg" alt=""><img src="fotos/20260415-0027.jpg" alt=""><img src="fotos/20260423-0011.jpg" alt=""></div><p class="more">No portfólio online: 7 fotos.</p></div>
+</article><h2 class="month">maio de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">15/05/2026</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Festa das Mães</h3><p>Café da manhã, apresentações das turmas, bingo com prêmios para as mães e um painel de flores. Fim de festa com trabalho e descontração.</p><div class="ph n3"><img src="fotos/20260515-0023.jpg" alt=""><img src="fotos/20260515-0030.jpg" alt=""><img src="fotos/20260515-0031.jpg" alt=""></div><p class="more">No portfólio online: 6 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">junho de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">12/06/2026</span><span class="tags">Meio ambiente e campo · Projetos de sala</span></div>
+  <div class="body"><h3>Semana do Meio Ambiente: O caminho da água</h3><p>O maior projeto do semestre. Começou com a palestra de Júnior, da Fazenda Água Viva, e com trabalhos do 8º e do 9º ano. Os anos iniciais produziram papel semente e uma maquete sobre o caminho da água, com pneus pintados. Os alunos entregaram na vila folders sobre coleta seletiva. A culminância foi na Fazenda Água Viva, com apresentações da Educação Infantil (De onde vem a água), do 1º ao 5º ano (fossas sustentáveis e fossa de bananeira, explicada pelo aluno Rafael) e do 6º ano ao Ensino Médio (sustentabilidade, coleta seletiva, fossas e compostagem).</p><p class="who">Toda a equipe · parceria <strong>Fazenda Água Viva</strong> e <strong>Mineração Cavasa</strong></p><div class="ph n3"><img src="fotos/20260612-0028.jpg" alt=""><img src="fotos/20260528-0004.jpg" alt=""><img src="fotos/20260529-0006.jpg" alt=""></div><p class="more">No portfólio online: 21 fotos, 3 vídeos.</p></div>
+</article><article class="nota"><span class="date">12/06/2026</span><div><b>A FLUPP doa a bicicleta da rifa.</b> A Fundação Lucia e Pelerson Penido doou a bicicleta da rifa da formatura 2026.</div></article><article class="entry">
+  <div class="meta"><span class="date">16/06/2026</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>5ª Conferência dos Direitos da Criança e do Adolescente</h3><p>Alunos da Escola Dona Rosa Penido, das salas anexas Getúlio Vargas, participaram da conferência municipal em Cocalinho. O estudante Pedro foi chamado à frente para explicar o que é medida socioeducativa, e estudantes se candidataram a delegados para representar as escolas do município na conferência estadual em Cuiabá.</p><div class="ph n3"><img src="fotos/20260616-0056.jpg" alt=""><img src="fotos/20260616-0057.jpg" alt=""><img src="fotos/20260616-0070.jpg" alt=""></div></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">22/06/2026</span><span class="tags">Escola e comunidade</span></div>
+  <div class="body"><h3>Quem alimenta a escola</h3><p>Pães feitos pela Karolliny para o lanche, almoços preparados pela Junielly e mesas fartas de quem cuida da cozinha todos os dias.</p><p class="who"><strong>Karolliny Dias</strong>, <strong>Junielly</strong> e <strong>Andreia</strong></p><div class="ph n3"><img src="fotos/20260615-0026.jpg" alt=""><img src="fotos/20260622-0015.jpg" alt=""><img src="fotos/20260622-0033.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">30/06/2026</span><span class="tags">Comemorações · Arte e cultura</span></div>
+  <div class="body"><h3>Festa Junina com a fanfarra</h3><p>Um dia de aprender com entretenimento na Escola Dona Rosa Penido, extensão Calcário Roncador, com a fanfarra municipal, apresentações de dança, muita comida boa e muita gente bonita.</p><p class="who">Equipe Rosa Penido · <strong>fanfarra municipal</strong></p><div class="ph n3"><img src="fotos/20260630-0075.jpg" alt=""><img src="fotos/20260617-0048.jpg" alt=""><img src="fotos/20260630-0061.jpg" alt=""></div><p class="more">No portfólio online: 8 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">agosto de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">04/08/2026</span><span class="tags">Comemorações · Escola e comunidade</span></div>
+  <div class="body"><h3>Volta às aulas e uniforme novo</h3><p>Boas-vindas ao segundo semestre e entrega do uniforme do Município. A FLUPP iniciou o levantamento dos gêneros literários trabalhados por turma no primeiro semestre.</p><div class="ph n3"><img src="fotos/20260806-0056.jpg" alt=""><img src="fotos/20260806-0012.jpg" alt=""><img src="fotos/20260804-0019.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><article class="nota"><span class="date">05/08/2026</span><div><b>Resultado do Ideb 2025.</b> O resultado do Ideb 2025 foi divulgado e acompanhado pela equipe. Em agosto, a FLUPP escreveu à escola parabenizando os resultados e propondo o compartilhamento dos planos de aula, com foco em leitura, escrita, revisão e reescrita em todas as áreas. <i>“A história da Rosa Penido é construída por vocês.” (Equipe FLUPP, agosto de 2026)</i></div></article><article class="entry">
+  <div class="meta"><span class="date">07/08/2026</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Dia dos Pais e Dia do Estudante</h3><p>Lembranças preparadas com carinho para os pais e uma homenagem no Dia do Estudante.</p><p class="who"><strong>Naureni de J. Costa</strong> e <strong>Laiza Rodrigues</strong></p><div class="ph n3"><img src="fotos/20260807-0023v1.jpg" alt=""><img src="fotos/20260807-0023v2.jpg" alt=""><img src="fotos/20260807-0023v3.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><h2 class="month">setembro de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">01/09/2026</span><span class="tags">Formação</span></div>
+  <div class="body"><h3>Formação pedagógica FLUPP 2026</h3><p>Encontros de formação na escola sobre os eixos de Língua Portuguesa (leitura e escuta, escrita, oralidade e análise linguística e semiótica) e de Matemática (números, álgebra, geometria, probabilidade e estatística, grandezas e medidas).</p><p class="who"><strong>Vanuse Ribeiro</strong>, <strong>Leonardo Dantas</strong> e <strong>Abadia Cunha</strong></p><div class="ph n3"><img src="fotos/20260901-0077.jpg" alt=""><img src="fotos/20260901-0079.jpg" alt=""><img src="fotos/20260901-0080.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">03/09/2026</span><span class="tags">Arte e cultura · Escola e comunidade</span></div>
+  <div class="body"><h3>Entrega oficial dos instrumentos da banda</h3><p>A escola recebeu oficialmente os instrumentos da banda. O ensino de música, que já tinha brilhado no VI Chá Literário, conta com o apoio da Mineradora Cavasa.</p><p class="who">Apoio <strong>Mineração Cavasa</strong> · registro de <strong>Pedro</strong></p><div class="ph n3"><img src="fotos/20260903-0111v1.jpg" alt=""><img src="fotos/20260903-0112v1.jpg" alt=""><img src="fotos/20260903-0114v1.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">04/09/2026</span><span class="tags">Arte e cultura · Leitura e literatura</span></div>
+  <div class="body"><h3>Cultura brasileira no pátio</h3><p>Amarelinha, brincadeiras de roda e leitura no Cantinho: atividades sobre a cultura brasileira para o 1º, 2º e 3º ano.</p><p class="who"><strong>Naureni de J. Costa</strong> · 1º, 2º e 3º anos</p><div class="ph n3"><img src="fotos/20260904-0115.jpg" alt=""><img src="fotos/20260904-0117.jpg" alt=""><img src="fotos/20260904-0085.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">09/09/2026</span><span class="tags">Leitura e literatura</span></div>
+  <div class="body"><h3>Bafo da leitura</h3><p>Para as crianças que gostam de brincar de bafo, um bafo com palavras e leitura.</p><p class="who"><strong>Naureni de J. Costa</strong></p><div class="ph n3"><img src="fotos/20260909-0076.jpg" alt=""><img src="fotos/20260909-0081.jpg" alt=""><img src="fotos/20260909-0082v1.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">10/09/2026</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>Setembro Amarelo: palavras que iluminam</h3><p>Roda de conversa, escrita, leitura, desenho e contação de história. Cada estudante deixou no painel uma mensagem de carinho, esperança e valorização da vida.</p><p class="who"><strong>Naureni de J. Costa</strong></p><div class="ph n3"><img src="fotos/20260910-0050.jpg" alt=""><img src="fotos/20260910-0053.jpg" alt=""><img src="fotos/20260910-0051.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">11/09/2026</span><span class="tags">Projetos de sala · Leitura e literatura</span></div>
+  <div class="body"><h3>Ciência na prática e rotina de leitura</h3><p>Na aula de Ciências, os alunos misturaram leite e vinagre e conversaram sobre alimentação saudável e o cuidado com certas misturas. Na mesma semana, a turma multisseriada mostrou a rotina de leitura em voz alta no quadro.</p><p class="who"><strong>Edimar Costa dos Santos</strong> e <strong>Naureni de J. Costa</strong></p><div class="ph n3"><img src="fotos/20260911-0007.jpg" alt=""><img src="fotos/20260911-0059v1.jpg" alt=""><img src="fotos/20260911-0059v2.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 2 vídeos.</p></div>
+</article><h2 class="month">outubro de 2026</h2><article class="entry">
+  <div class="meta"><span class="date">09/10/2026</span><span class="tags">Comemorações · Escola e comunidade</span></div>
+  <div class="body"><h3>Projeto Dia Feliz: Dia das Crianças</h3><p>Um dia inteiro para as crianças da Vila Roncador e os alunos da escola, com gincana de brincadeiras antigas entre as equipes Azul e Vermelha (pula corda, corrida do saco, dança da cadeira, ovo na colher, balinha no trigo), touro mecânico, cama elástica, futebol de sabão e piscina de bolinhas. Na mesma semana, a turma multisseriada mostrou a pasta sanfonada de 2026.</p><p class="who">Parceria <strong>Fazenda Água Viva / Recanto Santo Rei</strong>, <strong>Mineração Cavasa</strong> e Escola Dona Rosa</p><div class="ph n3"><img src="fotos/20261005-0023.jpg" alt=""><img src="fotos/20261009-0019.jpg" alt=""><img src="fotos/20261009-0020.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">14/10/2026</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Celebração do VII Chá e encerramento da gincana</h3><p>Lanche diferente em comemoração ao sucesso do VII Chá Literário e encerramento da gincana para a premiação.</p><div class="ph n3"><img src="fotos/20261014-0025.jpg" alt=""><img src="fotos/20261014-0013.jpg" alt=""><img src="fotos/20261014-0022.jpg" alt=""></div><p class="more">No portfólio online: 4 fotos, 1 vídeo.</p></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">15/10/2026</span><span class="tags">Comemorações</span></div>
+  <div class="body"><h3>Dia dos Professores</h3><p>Almoço oferecido pela Junielly, pela Andreia e pelo Pedro, homenagem da FLUPP e uma carta de Vanuse e Abadia para a equipe.</p><blockquote>“Ensinar é um exercício de imortalidade.” <cite>Rubem Alves, citado por Vanuse Ribeiro</cite></blockquote><div class="ph n3"><img src="fotos/20261015-0025.jpg" alt=""><img src="fotos/20261016-0007.jpg" alt=""><img src="fotos/20261015-0023.jpg" alt=""></div></div>
+</article><article class="entry">
+  <div class="meta"><span class="date">29/10/2026</span><span class="tags">Cidadania e saúde</span></div>
+  <div class="body"><h3>Palestra sobre bullying</h3><p>A escola recebeu o Conselho Tutelar, uma psicóloga e a Polícia Militar para uma palestra sobre bullying com os estudantes.</p><p class="who">Registro de <strong>Pedro</strong></p><div class="ph n3"><img src="fotos/20261029-0033.jpg" alt=""><img src="fotos/20261029-0028.jpg" alt=""><img src="fotos/20261029-0026.jpg" alt=""></div><p class="more">No portfólio online: 1 vídeo.</p></div>
+</article>
+</section>
+
+<section class="sec break">
+  <div class="mono kick">06 · Quem fez</div>
+  <h2>Pessoas e parceiros citados nos registros</h2><div class="rule"></div>
+  <div class="people"><div class="pg"><h4>Equipe da escola</h4><ul><li><b>Ednésio</b><span>Gestão e coordenação do projeto Jogar, Brincar e Aprender</span></li><li><b>Ana Maria Pereira</b><span>Coordenação, Ensino Médio, Agroecologia; idealizadora do Chá Literário</span></li><li><b>Lídia de Camargo</b><span>6º e 7º anos, Arte e Língua Portuguesa (2025)</span></li><li><b>Rosângela Ferreira Dias</b><span>8º e 9º anos, Arte, Agroecologia e Saberes do Campo</span></li><li><b>Edimar Costa dos Santos</b><span>4º e 5º anos, Ciências</span></li><li><b>Naureni de J. Costa</b><span>1º, 2º e 3º anos, classe multisseriada</span></li><li><b>Laiza Rodrigues</b><span>Educação Infantil</span></li><li><b>Simone</b><span>Educação Infantil e anos iniciais (VI Chá Literário)</span></li><li><b>Guilherme Barbosa</b><span>Professor em 2025; rochas, rifa solidária, cultura xavante</span></li><li><b>Jeinneffer Carvalho</b><span>6º e 7º anos e Educação Física (2026)</span></li><li><b>Mauriane Lemes</b><span>Equipe pedagógica (2026)</span></li><li><b>Karolliny Dias</b><span>Equipe (2026); pães do lanche</span></li></ul></div><div class="pg"><h4>Apoio, cozinha e registro</h4><ul><li><b>Bruno e Wilkner</b><span>Apoio no Jogar, Brincar e Aprender</span></li><li><b>Junielly e Andreia</b><span>Cozinha e almoços da equipe</span></li><li><b>Pedro</b><span>Organização de fotos e vídeos, roteiro do VII Chá</span></li><li><b>Anny Beatriz</b><span>Registro (2026)</span></li><li><b>Cleonice</b><span>Agente de saúde; alface da horta para o lanche</span></li></ul></div><div class="pg"><h4>FLUPP</h4><ul><li><b>Vanuse Ribeiro</b><span>Formadora</span></li><li><b>Leonardo Dantas</b><span>Formador; portfólio, site e vídeos</span></li><li><b>Abadia Cunha</b><span>Equipe FLUPP (2026)</span></li><li><b>Silvia</b><span>Fundação Lucia e Pelerson Penido</span></li><li><b>Eduarda</b><span>Fundação Lucia e Pelerson Penido</span></li><li><b>Fundação Lucia e Pelerson Penido</b><span>Formação, apoio e doação da bicicleta da rifa 2026</span></li></ul></div><div class="pg"><h4>Parceiros</h4><ul><li><b>Mineração Cavasa</b><span>Rochas e Minerais, ensino de música, Dia Feliz</span></li><li><b>Carlos Magno</b><span>Diretor do Grupo Cavasa</span></li><li><b>Júnior</b><span>Gerente operacional (Cavasa); palestra do Meio Ambiente (Água Viva)</span></li><li><b>Fazenda Água Viva / Recanto Santo Rei</b><span>Dia das Crianças 2025, Meio Ambiente e Dia Feliz 2026</span></li><li><b>Escola Gruta Azul</b><span>Participou do VI Chá Literário</span></li><li><b>Grupo Roncador</b><span>Mimo de Páscoa para a equipe</span></li></ul></div><div class="pg"><h4>Poder público e rede</h4><ul><li><b>Prefeitura de Cocalinho</b><span>Uniforme escolar e fanfarra municipal</span></li><li><b>Eliane Barros</b><span>Vice-prefeita; homenagem aos professores</span></li><li><b>Seduc-MT</b><span>Semana Pedagógica 2026</span></li><li><b>Silvia (DRE Barra do Garças)</b><span>Chefe da DRE</span></li><li><b>Edna</b><span>Professora da Escola Lúcia Penido</span></li><li><b>INDEA, Conselho Tutelar e Polícia Militar</b><span>Palestras na escola</span></li></ul></div><div class="pg"><h4>Estudantes nomeados</h4><ul><li><b>Marcos Vinícius</b><span>9º ano; grafite do mural da escola</span></li><li><b>Bianca e Sabriny</b><span>Encerramento do VI Chá Literário</span></li><li><b>Rafael</b><span>Explicou a fossa de bananeira na Fazenda Água Viva</span></li><li><b>Milena</b><span>9º ano; vendeu a rifa premiada da formatura 2025</span></li><li><b>Pedro</b><span>Conferência dos Direitos da Criança e do Adolescente</span></li></ul></div></div>
+</section>
+
+<section class="sec break">
+  <div class="mono kick">07 · Vozes</div>
+  <h2>O que foi dito ao longo do caminho</h2><div class="rule"></div>
+  <div class="voices"><figure><p>“Vcs são um grupo potente demais.”</p><figcaption><b>Vanuse Ribeiro</b> · antes das apresentações do Meio Ambiente, junho de 2025</figcaption></figure><figure><p>“Essas crianças se divertem. Ainda que seja pegando cocô de vaca, sair da sala é a melhor aula.”</p><figcaption><b>Ana Maria Pereira</b> · coleta de insumos da horta, junho de 2025</figcaption></figure><figure><p>“Hoje, acredito que vou fazer parte da história de vida dos meus alunos.”</p><figcaption><b>Guilherme Barbosa</b> · despedida, agosto de 2025</figcaption></figure><figure><p>“Acredito que a Escola Rosa Penido está plenamente preparada para avançar na produção de um documentário.”</p><figcaption><b>Leonardo Dantas</b> · depois do vídeo do VI Chá Literário, outubro de 2025</figcaption></figure><figure><p>“Transformar planejamento em ação, ação em evidência e evidência em novas decisões pedagógicas.”</p><figcaption><b>Vanuse Ribeiro</b> · fim do primeiro semestre, julho de 2026</figcaption></figure><figure><p>“Deixar um pouquinho de mim e levar um pouquinho de cada um comigo.”</p><figcaption><b>Mauriane Lemes</b> · despedida, setembro de 2026</figcaption></figure></div>
+  <div class="mono kick" style="margin-top:10mm">08 · Imprensa e fontes</div>
+  <h2 style="font-size:16pt;margin:2mm 0 4mm">Onde a escola apareceu</h2>
+  <table class="press"><tr><th>21/05/2025</th><td>Alunos realizam a 1ª Exposição de Rochas e Minerais na Escola Dona Rosa Penido · Notícias Interativa<br><span>https://noticiasinterativa.com.br/noticias/cidades/31546-alunos-realizam-a-1-exposicao-de-rochas-e-minerais-na-escola-dona-rosa-penido</span></td></tr><tr><th>06/07/2025</th><td>Site da escola: escolarosapenido.site<br><span>https://www.escolarosapenido.site</span></td></tr><tr><th>2025</th><td>Portfólio da escola no Sway<br><span>https://sway.cloud.microsoft/tfce9C4KazkiwSWG?ref=Link</span></td></tr><tr><th>24/09/2025</th><td>Escolas promovem Chá Literário · Notícias Interativa<br><span>https://noticiasinterativa.com.br/noticias/educacao/32721-escolas-promovem-cha-literario-veja-video</span></td></tr><tr><th>06/08/2026</th><td>Água Boa e Nova Nazaré são destaques no Ideb regional · Notícias Interativa<br><span>https://noticiasinterativa.com.br/noticias/educacao/35881-agua-boa-e-nova-nazare-sao-destaques-no-ideb-regional</span></td></tr></table>
+  <div class="credits">
+    <img src="logo_flupp.png" alt="FLUPP">
+    <p><b>Ficha técnica.</b> Acompanhamento pedagógico: Fundação Lucia e Pelerson Penido (FLUPP), formadores Vanuse Ribeiro e Leonardo Dantas. Registros: equipe da Escola Municipal Dona Rosa Penido Dalla Vecchia. Organização das fotos e vídeos em 2026: Pedro.</p>
+    <p><b>Fonte.</b> Grupo "FLUPP – Formação 2025", de 07/04/2025 a 29/10/2026. Fotos de crianças e adolescentes publicadas para fins pedagógicos e institucionais; conferir as autorizações de uso de imagem antes de divulgar fora da rede escolar.</p>
+    <p><b>Versão.</b> 31 de outubro de 2026. Versão com vídeos e fotos ampliáveis: portfólio online Rosa Penido 2025–2026.</p>
+  </div>
+</section>
+</body></html>
